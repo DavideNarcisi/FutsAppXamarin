@@ -15,4 +15,5 @@ namespace FutsAppXamarin
             InitializeComponent();
         }
     }
+
 }
