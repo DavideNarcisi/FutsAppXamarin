@@ -11,12 +11,13 @@ using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 
 namespace FutsAppXamarin
 {
-    public partial class MainPage
+    public partial class MainPage : MasterDetailPage
     {
         public MainPage()
         {
             InitializeComponent();
-            On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
+            
+
         }
     }
 

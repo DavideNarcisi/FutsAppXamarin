@@ -9,17 +9,6 @@
 
     </style>
 
-    <style name="Audiowide" parent="android:Widget.TextView">
-        <item name="android:fontFamily">@font/audiowide</item>
-    </style>
-
-
-    <style name="Toolbar.TitleText" parent="TextAppearance.Widget.AppCompat.Toolbar.Title">
-        <item name="android:textColor">@color/azzurro</item>
-        <item name="android:fontFamily">@font/bungee_inline</item>
-
-    </style>
-
     <style name="Theme.ToogleTheme" parent="Theme.AppCompat.Light">
         <!-- active thumb & track color (30% transparency) -->
         <item name="colorControlActivated">#46bdbf</item>

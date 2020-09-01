@@ -1,14 +1,33 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FutsAppXamarin.MainPage"
-               xmlns:pages="clr-namespace:FutsAppXamarin"
-             xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
-            android:TabbedPage.ToolbarPlacement="Bottom"
+               xmlns:local="clr-namespace:FutsAppXamarin"
+                  
             Title="FUTSAPP">
 
-    <pages:search/>
-    <pages:home/>
-    <pages:next/>
+    <MasterDetailPage.Master>
+        <ContentPage Title="Master" Padding="10" BackgroundColor="Gray"> //attributo Title obbligatorio
+            <ContentPage.Content>
+                <StackLayout Margin="5,30,5,5">
+                    <Label Text="Master Page">
+                        
+                    </Label>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Master>
 
-</TabbedPage>
+    <MasterDetailPage.Detail>
+        <ContentPage Padding="10">
+            <ContentPage.Content>
+                <StackLayout Margin="5,30,5,5">
+                    <Label Text="Detail Page">
+
+                    </Label>
+                </StackLayout>
+            </ContentPage.Content>
+        </ContentPage>
+    </MasterDetailPage.Detail>
+
+</MasterDetailPage>
