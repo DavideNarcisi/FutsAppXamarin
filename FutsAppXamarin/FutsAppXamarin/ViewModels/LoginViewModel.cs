@@ -35,7 +35,7 @@ namespace XF_Login.ViewModels
         }
         public void OnSubmit()
         {
-            if (email != "macoratti@yahoo.com" || password != "secret")
+            if (email == "" || password == "")
             {
                 DisplayInvalidLoginPrompt();
             }

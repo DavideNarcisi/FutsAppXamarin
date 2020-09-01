@@ -1,7 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="launcher_background">#FFFFFF</color>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#65c69d</color>
+    <color name="colorPrimaryDark">#65c69d</color>
+    <color name="colorAccent">#666f78</color>
+    <color name="c1">#ffff00</color>
+    <color name="c2">#666f78</color>
+    <color name="c3">#353e47</color>
+    <color name="gold">#fdd017</color>
+    <color name="white">#ffffff</color>
+    <color name="acqua_marina">#66cdaa</color>
+    <color name="silver">#c0c0c0</color>
+    <color name="red">#F12213</color>
+    <color name="black">#000000</color>
+    <color name="azzurro">#07a4f3</color>
+    <color name="blu_scuro">#094ba3</color>
+    <color name="giallino">#fffc95</color>
+    <color name="giallone">#ffff00</color>
+
 </resources>
+

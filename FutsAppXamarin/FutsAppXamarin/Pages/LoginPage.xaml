@@ -2,26 +2,28 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"  
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
              x:Class="XF_Login.Pages.LoginPage"  
-             BackgroundImage="logo.jpg">
+             BackgroundImageSource="background_default.xml">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" Padding="30" Spacing="40">
-            <BoxView HeightRequest="10"/>
-            <Image HorizontalOptions="Center" WidthRequest="300" Source="maco.jpg"/>
-            <Frame BackgroundColor="#BF043055" HasShadow="False">
+            <Label Text="ACCEDI" FontSize="50" TextColor="#ffff00"/>
+            <Frame HasShadow="False">
                 <StackLayout Orientation="Vertical" Spacing="10">
                     <Entry x:Name="Email" Text="{Binding Email}" Placeholder="Email"   
-                           PlaceholderColor="White" HeightRequest="40"   
+                           HeightRequest="40" 
                            Keyboard="Email"  
-                           TextColor="White"/>
+                           
+                           TextColor="#094ba3"/>
                     <Entry x:Name="Password" Text="{Binding Password}" Placeholder="Password"   
-                           PlaceholderColor="White" HeightRequest="40"   
+                          
+                          
+                           HeightRequest="40"   
                            IsPassword="True"  
-                           TextColor="White"/>
+                           TextColor="#094ba3"/>
                 </StackLayout>
             </Frame>
             <Button Command="{Binding SubmitCommand}" Text="Login" TextColor="White"  
                     FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
-                    BackgroundColor="#088da5" />
+                     />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>  

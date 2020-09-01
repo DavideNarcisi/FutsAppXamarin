@@ -3,6 +3,11 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FutsAppXamarin.App">
     <Application.Resources>
+        <Color x:Key="c1">#ffff00</Color>
+        <Color x:Key="azzurro">#07a4f3</Color>
+        <Color x:Key="blu_scuro">#094ba3</Color>
+        <Color x:Key="giallino">#fffc95</Color>
+        <Color x:Key="red">#F12213</Color>
 
     </Application.Resources>
 </Application>

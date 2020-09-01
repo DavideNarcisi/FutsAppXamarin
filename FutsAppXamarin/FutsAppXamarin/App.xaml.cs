@@ -10,7 +10,7 @@ namespace FutsAppXamarin
         {
             InitializeComponent();
 
-            MainPage = new XF_Login.Pages.LoginPage();
+            MainPage = new MainPage();
         }
 
         protected override void OnStart()

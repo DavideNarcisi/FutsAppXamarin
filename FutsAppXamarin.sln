@@ -7,7 +7,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FutsAppXamarin.Android", "F
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FutsAppXamarin.iOS", "FutsAppXamarin\FutsAppXamarin.iOS\FutsAppXamarin.iOS.csproj", "{532796AE-93A5-4A3B-8DE7-23988353677A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FutsAppXamarin", "FutsAppXamarin\FutsAppXamarin\FutsAppXamarin.csproj", "{9AC5F9FB-7374-42CF-B08A-2B31751E113A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FutsAppXamarin", "FutsAppXamarin\FutsAppXamarin\FutsAppXamarin.csproj", "{9AC5F9FB-7374-42CF-B08A-2B31751E113A}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
