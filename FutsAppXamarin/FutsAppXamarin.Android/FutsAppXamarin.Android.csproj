@@ -63,8 +63,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidAsset Include="Assets\BUNGEEINLINE-REGULAR.TTF" />
     <AndroidAsset Include="Assets\Audiowide-Regular.ttf" />
+    <AndroidAsset Include="Assets\titoli.ttf" />
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />

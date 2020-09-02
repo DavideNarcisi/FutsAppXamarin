@@ -7,11 +7,11 @@
     <ContentPage.Content>
         <StackLayout>
             <Label Text="ULTIMA PARTITA"
-                   FontFamily="BUNGEEINLINE_REGULAR.TTF"/>
+                   FontFamily="titoli.ttf#titoli"
+                   FontSize="30"/>
 
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Button
+                Text="INSERISCI RISULTATO"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
