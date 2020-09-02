@@ -19,6 +19,7 @@ namespace FutsAppXamarin
         {
             InitializeComponent();
             On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
+            tabbed_page.CurrentPage = Children[1];
         }
     }
 }

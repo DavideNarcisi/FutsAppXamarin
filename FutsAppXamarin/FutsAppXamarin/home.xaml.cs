@@ -14,9 +14,10 @@ namespace FutsAppXamarin
     {
         public home()
         {
-        
+      
             InitializeComponent();
-            campo.Source = "campo.jpg";
+            
+
             
             
         }

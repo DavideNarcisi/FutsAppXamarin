@@ -3,27 +3,67 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FutsAppXamarin.home"
              Title="HOME"
+             BackgroundImageSource="background_default.xml"
              IconImageSource="home.xml">
     <ContentPage.Content>
-        <StackLayout>
-            <StackLayout HorizontalOptions="Fill" HeightRequest="150">
-                <Image x:Name="campo"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+        <StackLayout Orientation="Vertical">
+            <StackLayout HorizontalOptions="Fill" VerticalOptions="Start" BackgroundColor="Aquamarine">
+           
                 <Label Text="ULTIMA PARTITA"
+                       FontSize="30"
                    FontFamily="titoli.ttf#titoli"
-                   FontSize="30"/>
+                   TextColor="#ffff00"
+                   HorizontalOptions="FillAndExpand"
+                   HorizontalTextAlignment="Center" Margin="0,10,0,20"/>
+
+                <Label x:Name="risultato" FontSize="35"  FontFamily="titoli.ttf#titoli"  HorizontalOptions="FillAndExpand"
+                   HorizontalTextAlignment="Center"/>
             </StackLayout>
-            
-            <Button
-                Text="INSERISCI RISULTATO" Clicked="gestisci_click" x:Name="inserisci"/>
+            <StackLayout>
+                <Button Text="INSERISCI RISULTATO" Clicked="gestisci_click" x:Name="inserisci"
+                        FontFamily="titoli.ttf#titoli"
+                        TextColor="#07a4f3"
+                        FontSize="18"
+                        BorderColor="White"
+                        BorderWidth="4"
+                        CornerRadius="30"
+                        BackgroundColor="#fdd017"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="20,10,20,5"/>
 
-            <Button
-                Text="STORICO" Clicked="gestisci_click" x:Name="storico"/>
+                <Button Text="STORICO" Clicked="gestisci_click" x:Name="storico"
+                        FontFamily="titoli.ttf#titoli"
+                        TextColor="#07a4f3"
+                        FontSize="18"
+                        BorderColor="White"
+                        BorderWidth="4"
+                        CornerRadius="30"
+                        BackgroundColor="#fdd017"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="20,5"/>
 
-            <Button
-                Text="CLASSIFICHE" Clicked="gestisci_click" x:Name="classifiche"/>
+                <Button Text="CLASSIFICHE" Clicked="gestisci_click" x:Name="classifiche"
+                        FontFamily="titoli.ttf#titoli"
+                        TextColor="#07a4f3"
+                        FontSize="18"
+                        BorderColor="White"
+                        BorderWidth="4"
+                        CornerRadius="30"
+                        BackgroundColor="#fdd017"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="20,5"/>
 
-            <Button
-                Text="NUOVA PARTITA" Clicked="gestisci_click" x:Name="nuova_partita"/>
+                <Button Text="NUOVA PARTITA" Clicked="gestisci_click" x:Name="nuova_partita"
+                        FontFamily="titoli.ttf#titoli"
+                        TextColor="#07a4f3"
+                        FontSize="18"
+                        BorderColor="White"
+                        BorderWidth="4"
+                        CornerRadius="30"
+                        BackgroundColor="#fdd017"
+                        HorizontalOptions="FillAndExpand"
+                        Margin="20,5,20,10"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
