@@ -6,12 +6,24 @@
              IconImageSource="home.xml">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="ULTIMA PARTITA"
+            <StackLayout HorizontalOptions="Fill" HeightRequest="150">
+                <Image x:Name="campo"  HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand"/>
+                <Label Text="ULTIMA PARTITA"
                    FontFamily="titoli.ttf#titoli"
                    FontSize="30"/>
+            </StackLayout>
+            
+            <Button
+                Text="INSERISCI RISULTATO" Clicked="gestisci_click" x:Name="inserisci"/>
 
             <Button
-                Text="INSERISCI RISULTATO"/>
+                Text="STORICO" Clicked="gestisci_click" x:Name="storico"/>
+
+            <Button
+                Text="CLASSIFICHE" Clicked="gestisci_click" x:Name="classifiche"/>
+
+            <Button
+                Text="NUOVA PARTITA" Clicked="gestisci_click" x:Name="nuova_partita"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
