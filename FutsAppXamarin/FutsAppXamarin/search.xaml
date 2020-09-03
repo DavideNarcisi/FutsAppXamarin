@@ -5,10 +5,48 @@
              Title="SEARCH"
              IconImageSource="contact.xml">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
+        <StackLayout Orientation="Vertical">
+        <Label Text="Giocatori"
+               FontSize="80"/>
+            <SearchBar
+                x:Name="SearchBar"
+                SearchButtonPressed="SearchBar_SearchButtonPressed"/>
+            
+
+
+            <ListView x:Name="GiocatoriListView"
+                  HasUnevenRows="True"
+                  ItemTapped="Giocatori_ItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Grid BackgroundColor="Blue"
+                                  Padding="10">
+                                <Label Text="{Binding Id}"
+                                FontSize="50"
+                                       TextColor="White"/>
+                            </Grid>
+
+                        <StackLayout Orientation="Vertical">
+                             <Label Text="{Binding Fullname}"
+                                    FontSize="24"
+                                    TextColor="Black"/>
+                            <Label Text="{Binding Speciality}"
+                                   FontSize="24"
+                                   TextColor="Gray"/>
+                        </StackLayout>
+                            </StackLayout>
+                        
+                    </ViewCell>
+                    
+                </DataTemplate>
+                
+            </ListView.ItemTemplate>  
+            
+        </ListView>
+
+    </StackLayout>
+   
+        </ContentPage.Content>
 </ContentPage>
