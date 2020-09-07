@@ -1,12 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FutsAppXamarin.Splash">
+             x:Class="FutsAppXamarin.Splash"
+             BackgroundColor="#fffc95">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Orientation="Vertical">
+            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand">
+                <Label Text="FUTSAPP"
+                       FontSize="50"
+                       TextColor="#07a4f3"
+                       FontFamily="titoli.ttf#titoli"
+                     />
+                <Image Source="logo_futsapp2.png" HeightRequest="150" WidthRequest="150"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

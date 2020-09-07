@@ -15,11 +15,11 @@ namespace FutsAppXamarin
     {
         public MainPage()
         {
+            
             InitializeComponent();
-            Xamarin.Forms.Application.Current.Properties["firstrun"] = false;
+            Xamarin.Forms.Application.Current.Properties["firstrun"] = "false";
             Xamarin.Forms.Application.Current.SavePropertiesAsync();
             
-
         }
 
        

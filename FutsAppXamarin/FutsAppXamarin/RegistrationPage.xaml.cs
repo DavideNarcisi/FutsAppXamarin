@@ -17,7 +17,7 @@ namespace FutsAppXamarin
         
         public RegistrationPage()
         {
-            Console.WriteLine("ooooooooooooo");
+            
             InitializeComponent();
 
         }
@@ -26,7 +26,7 @@ namespace FutsAppXamarin
         {
             if (!(await Auth.Register(username.Text, txtMail.Text, txtPass.Text)).Equals(""))
             {
-                Application.Current.MainPage = new NavigationPage(new MainPage());
+                Application.Current.MainPage = new Splash();
                 Navigation.RemovePage(this);         
             }
             else

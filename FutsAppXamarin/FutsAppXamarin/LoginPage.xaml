@@ -5,7 +5,7 @@
              BackgroundImageSource="background_default.xml">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" Padding="30" Spacing="40">
-            <Label Text="ACCEDI" FontSize="50" TextColor="#ffff00"/>
+            <Label Text="ACCEDI" FontSize="50" TextColor="#ffff00" FontFamily="titoli.ttf#titoli"/>
             <Frame HasShadow="False">
                 <StackLayout Orientation="Vertical" Spacing="10">
                     <Entry x:Name="Email" Placeholder="Email"   

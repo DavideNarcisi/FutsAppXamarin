@@ -13,11 +13,25 @@ namespace FutsAppXamarin
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Splash : ContentPage
     {
+        string user;
         public Splash()
         {
-            InitializeComponent();
-            UserLoad.LoadUser("nicola");
-            DataLoad.LoadMatch("nicola");
+            InitializeComponent();            
+            user = Application.Current.Properties["username"].ToString();
+            Load();
+        }
+
+        public async void Load()
+        {
+            if (!(await UserLoad.LoadUser(user) && await DataLoad.LoadMatch(user)))
+            {
+                await DisplayAlert("ERRORE", "Connessione debole o assente", "CHIUDI APP");
+                 }
+
+            else
+                Application.Current.MainPage = new NavigationPage(new MainPage());
+
+            Navigation.RemovePage(this);
         }
     }
 }

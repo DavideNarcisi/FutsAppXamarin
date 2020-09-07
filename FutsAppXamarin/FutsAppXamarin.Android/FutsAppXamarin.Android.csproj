@@ -33,6 +33,10 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AndroidLinkMode>None</AndroidLinkMode>
+    <AotAssemblies>false</AotAssemblies>
+    <EnableLLVM>false</EnableLLVM>
+    <AndroidEnableProfiledAot>false</AndroidEnableProfiledAot>
+    <BundleAssemblies>false</BundleAssemblies>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -91,18 +95,18 @@
     <AndroidResource Include="Resources\layout\Toolbar.xml" />
     <AndroidResource Include="Resources\values\styles.xml" />
     <AndroidResource Include="Resources\values\colors.xml" />
-    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon.xml" />
-    <AndroidResource Include="Resources\mipmap-anydpi-v26\icon_round.xml" />
-    <AndroidResource Include="Resources\mipmap-hdpi\icon.png" />
-    <AndroidResource Include="Resources\mipmap-hdpi\launcher_foreground.png" />
-    <AndroidResource Include="Resources\mipmap-mdpi\icon.png" />
-    <AndroidResource Include="Resources\mipmap-mdpi\launcher_foreground.png" />
-    <AndroidResource Include="Resources\mipmap-xhdpi\icon.png" />
-    <AndroidResource Include="Resources\mipmap-xhdpi\launcher_foreground.png" />
-    <AndroidResource Include="Resources\mipmap-xxhdpi\icon.png" />
-    <AndroidResource Include="Resources\mipmap-xxhdpi\launcher_foreground.png" />
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\icon.png" />
-    <AndroidResource Include="Resources\mipmap-xxxhdpi\launcher_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\logo_futsapp2.xml" />
+    <AndroidResource Include="Resources\mipmap-anydpi-v26\logo_futsapp2_round.xml" />
+    <AndroidResource Include="Resources\mipmap-hdpi\logo_futsapp2.png" />
+    <AndroidResource Include="Resources\mipmap-hdpi\logo_futsapp2_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\logo_futsapp2.png" />
+    <AndroidResource Include="Resources\mipmap-mdpi\logo_futsapp2_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\logo_futsapp2.png" />
+    <AndroidResource Include="Resources\mipmap-xhdpi\logo_futsapp2_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\logo_futsapp2.png" />
+    <AndroidResource Include="Resources\mipmap-xxhdpi\logo_futsapp2_foreground.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\logo_futsapp2.png" />
+    <AndroidResource Include="Resources\mipmap-xxxhdpi\logo_futsapp2_foreground.png" />
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\strings.xml" />
@@ -123,15 +127,6 @@
     <AndroidResource Include="Resources\drawable\border.xml" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\home.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\contact.xml" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\ic_event_note_black_24dp.xml" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\campo.jpg" />
   </ItemGroup>
   <ItemGroup>
@@ -139,6 +134,27 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\logo_futsapp2_background.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\logo_futsapp2.png">
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+      <SubType>Designer</SubType>
+    </AndroidResource>
+  </ItemGroup>
+	<ItemGroup>
+		<AndroidResource Include="Resources\drawable\bkg_2.xml" />
+	</ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\home.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_event_note_black_24dp.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\contact.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

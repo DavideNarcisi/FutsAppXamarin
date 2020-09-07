@@ -11,7 +11,7 @@ namespace FutsAppXamarin.Pages
     {
         public LoginPage()
         {
-            Console.WriteLine("iiiiiiiiiiiiiiiiiiiiiii");
+           
             InitializeComponent();
         }
 
@@ -19,7 +19,7 @@ namespace FutsAppXamarin.Pages
         {
             if (!(await Auth.Login(Email.Text, Password.Text)).Equals(""))
             {
-                Application.Current.MainPage= new NavigationPage(new MainPage());
+                Application.Current.MainPage = new Splash();
                 Navigation.RemovePage(this);
             }
             else
@@ -28,7 +28,7 @@ namespace FutsAppXamarin.Pages
 
         public async void btn_Reg(object sender, System.EventArgs e)
         {
-            await Navigation.PushAsync(new LoginPage());
+            Application.Current.MainPage = new RegistrationPage();
             Navigation.RemovePage(this);
         }
     }
