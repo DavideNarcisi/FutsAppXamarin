@@ -21,21 +21,14 @@
                 <DataTemplate>
                     <ViewCell>
                         <StackLayout Orientation="Horizontal">
-                            <Grid BackgroundColor="Blue"
-                                  Padding="10">
-                                <Label Text="{Binding Id}"
-                                FontSize="50"
-                                       TextColor="White"/>
-                            </Grid>
+                            
 
-                        <StackLayout Orientation="Vertical">
-                             <Label Text="{Binding Fullname}"
+                        
+                             <Label Text="{Binding username}"
                                     FontSize="24"
                                     TextColor="Black"/>
-                            <Label Text="{Binding Speciality}"
-                                   FontSize="24"
-                                   TextColor="Gray"/>
-                        </StackLayout>
+                            
+                        
                             </StackLayout>
                         
                     </ViewCell>

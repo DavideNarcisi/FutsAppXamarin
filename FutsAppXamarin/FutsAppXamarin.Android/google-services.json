@@ -8,12 +8,49 @@
   "client": [
     {
       "client_info": {
+        "mobilesdk_app_id": "1:703656558314:android:2a7bdd6b2dcf05a566e193",
+        "android_client_info": {
+          "package_name": "com.companyname.futsappxamarin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "703656558314-1hiqd9l7p187e6il784e8f8q1bhlcg5l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyArul72XWT3mLfDBlKhANVL9YChuqtBsXw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "703656558314-1hiqd9l7p187e6il784e8f8q1bhlcg5l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
         "mobilesdk_app_id": "1:703656558314:android:9f5bae640ffcdc9966e193",
         "android_client_info": {
           "package_name": "com.univpm.futsapp"
         }
       },
       "oauth_client": [
+        {
+          "client_id": "703656558314-tf41suk9lv78hcl15ir0prln5v8bt4c7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.univpm.futsapp",
+            "certificate_hash": "dd47950250e4b8bfcf124fdd37eaa704f09a1570"
+          }
+        },
         {
           "client_id": "703656558314-6fdrj6scecf3lp7k3d9p970f98j1b09g.apps.googleusercontent.com",
           "client_type": 1,

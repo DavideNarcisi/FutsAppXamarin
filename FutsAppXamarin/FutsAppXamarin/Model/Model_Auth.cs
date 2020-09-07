@@ -12,8 +12,7 @@ namespace FutsAppXamarin.Model
         Task<string> Register(string N, string E, string P);
         
         Task<bool> Logout();
-        bool IsAuthenticated();
-        string GetCurrentUserId();
+      
     }
 
 
@@ -65,15 +64,6 @@ namespace FutsAppXamarin.Model
             }
         }
 
-        public static bool IsAuthenticated()
-        {
-            return auth.IsAuthenticated();
-        }
-
-        public static string GetCurrentUserId()
-        {
-            return auth.GetCurrentUserId();
-        }
-
+       
     }
 }

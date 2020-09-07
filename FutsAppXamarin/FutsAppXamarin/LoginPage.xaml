@@ -1,19 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"  
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
-             x:Class="XF_Login.Pages.LoginPage"  
+             x:Class="FutsAppXamarin.Pages.LoginPage"  
              BackgroundImageSource="background_default.xml">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" Padding="30" Spacing="40">
             <Label Text="ACCEDI" FontSize="50" TextColor="#ffff00"/>
             <Frame HasShadow="False">
                 <StackLayout Orientation="Vertical" Spacing="10">
-                    <Entry x:Name="Email" Text="{Binding Email}" Placeholder="Email"   
+                    <Entry x:Name="Email" Placeholder="Email"   
                            HeightRequest="40" 
                            Keyboard="Email"  
                            
                            TextColor="#094ba3"/>
-                    <Entry x:Name="Password" Text="{Binding Password}" Placeholder="Password"   
+                    <Entry x:Name="Password" Placeholder="Password"   
                           
                           
                            HeightRequest="40"   
@@ -21,9 +21,15 @@
                            TextColor="#094ba3"/>
                 </StackLayout>
             </Frame>
-            <Button Command="{Binding SubmitCommand}" Text="Login" TextColor="White"  
-                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
+            <Button Text="Login" TextColor="White"  
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand" 
+                    Clicked="btn_Log"
                      />
+
+            <Button Text="Registrati" TextColor="White"  
+                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
+                    Clicked="btn_Reg"
+                    />
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>  

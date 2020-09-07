@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FutsAppXamarin.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,14 +8,16 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace FutsAppXamarin.Pages
+namespace FutsAppXamarin
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class View1 : ContentPage
+    public partial class Splash : ContentPage
     {
-        public View1()
+        public Splash()
         {
             InitializeComponent();
+            UserLoad.LoadUser("nicola");
+            DataLoad.LoadMatch("nicola");
         }
     }
 }

@@ -16,36 +16,13 @@ namespace FutsAppXamarin
         public search()
         {
             InitializeComponent();
-             giocatori = new List<Giocatore>
-             {
-                new Giocatore
-                {
-                    Id = 1,
-                    Fullname = "Momo",
-                    Speciality = "Attaccante"
-                },
-                {
-                    new Giocatore
-                    {
-                        Id =2 ,
-                        Fullname = "Tosky",
-                        Speciality = "Portiere"
-                    }
-                },
-                  new Giocatore
-                    {
-                        Id =3 ,
-                        Fullname = "Fiore",
-                        Speciality = "Centrocampista"
-                    }
-
-            };
-            GiocatoriListView.ItemsSource =  new List<Giocatore>();
+            //giocatori = new List<Giocatore>(Giocatore.players);
+            //GiocatoriListView.ItemsSource =  new List<Giocatore>();
         }
         private async void Giocatori_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var giocatore = e.Item as Giocatore;
-            await DisplayAlert("Giocatore premuto", "Giocatore : " + giocatore.Fullname, "OK");
+            await DisplayAlert("Giocatore premuto", "Giocatore : " + giocatore.username, "OK");
 
 
         }
@@ -55,10 +32,11 @@ namespace FutsAppXamarin
                        string keyword = SearchBar.Text;
             //IEnumerable<string> searchResult = giocatori.Where(giocatori => giocatori.ToLower().Contains(keyword.ToLower());
             List<Giocatore> Searchresult = new List<Giocatore> ();
-          foreach (var g in giocatori)
+            giocatori = new List<Giocatore>(Giocatore.players);
+            foreach (var g in giocatori)
             {
 
-                if (g.Fullname.ToLower().Contains(keyword.ToLower()))
+                if (g.username.ToLower().Contains(keyword.ToLower()))
                    Searchresult.Add(g);
             }
 

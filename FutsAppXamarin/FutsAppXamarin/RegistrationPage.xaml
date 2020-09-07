@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FutsAppXamarin.RegistrationPage"
+             BackgroundImageSource="background_default.xml">
+    <ContentPage.Content>
+        <StackLayout Spacing="5" Margin="5,0" Padding="0" Visual="Default" Orientation="Vertical" VerticalOptions="StartAndExpand">
+            <Label Text="ENTRA IN FUTSAPP" FontSize="40" FontAttributes="Bold"  Margin="5,0,0,0" TextColor="#000000" FontFamily="titoli.ttf#titoli"></Label>
+
+            <Entry x:Name="username" Placeholder="Username"/>
+            <Entry x:Name="txtMail" Placeholder="Email" Keyboard="Email"/>
+            <Entry x:Name="txtPass" Placeholder="Password" IsPassword="True"/>
+            <Button x:Name="btnRegistra" Clicked="Btn_Registra_Clicked" Text="Registrati"  BackgroundColor="#000000" TextColor="White"/>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
