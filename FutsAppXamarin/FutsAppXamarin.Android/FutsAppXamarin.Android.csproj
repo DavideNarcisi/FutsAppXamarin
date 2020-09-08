@@ -76,6 +76,7 @@
   <ItemGroup>
     <Compile Include="Auth.cs" />
     <Compile Include="DataLoad.cs" />
+    <Compile Include="DataSave.cs" />
     <Compile Include="FriendsLoad.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
@@ -144,9 +145,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>
-	<ItemGroup>
-		<AndroidResource Include="Resources\drawable\bkg_2.xml" />
-	</ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\bkg_2.xml" />
+  </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\home.xml" />
   </ItemGroup>
@@ -155,6 +156,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\contact.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\editFAB.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

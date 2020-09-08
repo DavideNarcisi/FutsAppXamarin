@@ -22,6 +22,7 @@ namespace FutsAppXamarin
         private async void Giocatori_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var giocatore = e.Item as Giocatore;
+
             await DisplayAlert("Giocatore premuto", "Giocatore : " + giocatore.username, "OK");
 
 

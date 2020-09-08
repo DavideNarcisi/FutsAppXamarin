@@ -4,7 +4,8 @@
              x:Class="FutsAppXamarin.home"
              Title="HOME"
              BackgroundImageSource="background_default.xml"
-             IconImageSource="home.xml">
+             IconImageSource="home.xml"
+            >
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
             <StackLayout HorizontalOptions="Fill" VerticalOptions="Start" BackgroundColor="Aquamarine">
