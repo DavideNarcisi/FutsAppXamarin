@@ -4,35 +4,43 @@
              x:Class="FutsAppXamarin.search"
              Title="SEARCH"
              IconImageSource="contact.xml"
+             BackgroundImageSource="background_default.xml"
             >
+  
+          
+   
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
-        <Label Text="Giocatori"
-               FontSize="80"/>
-            <SearchBar
-                x:Name="SearchBar"
+            <Frame BackgroundColor="#094ba3" CornerRadius="10" Margin="20,5,20,5" Padding="4,4,4,4">
+                <Frame BackgroundColor="#f0ffff" CornerRadius="10" Padding="1,1,1,1">
+                    <SearchBar
+                    x:Name="SearchBar"
+                    FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                    FontSize="14"
+                    
+                    HorizontalTextAlignment="Center"
+                    Placeholder="Cerca Giocatore..."                    
+                    BackgroundColor="#f0ffff"
+                    TextColor="#094ba3"
                 SearchButtonPressed="SearchBar_SearchButtonPressed"/>
-            
-
-
+                </Frame>
+            </Frame>
             <ListView x:Name="GiocatoriListView"
                   HasUnevenRows="True"
-                  ItemTapped="Giocatori_ItemTapped">
+                  >
             <ListView.ItemTemplate>
                 <DataTemplate>
-                    <ViewCell >
-                        <StackLayout Orientation="Horizontal" >
-                            
+                        <ViewCell >
+                            <Button Margin="15,5,15,5"
+                                Text="{Binding username}"
+                                    
+                                    FontSize="18" BorderWidth="4"
+                                    TextColor="#07a4f3" BorderColor="#fdd017"
+                                    BackgroundColor="#ffff00" CornerRadius="15"
+                                    FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                                    Clicked="Giocatori_ItemTapped"/>
 
-                        
-                             <Label Text="{Binding username}"
-                                    FontSize="24"
-                                    TextColor="Black"/>
-                            
-                        
-                            </StackLayout>
-                        
-                    </ViewCell>
+                        </ViewCell>
                     
                 </DataTemplate>
                 

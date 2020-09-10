@@ -9,7 +9,7 @@ namespace FutsAppXamarin.Model
         {
             public static readonly BindableProperty ShadowColorProperty = BindableProperty.Create(nameof(ShadowColor), typeof(Color), typeof(MyFrame), Color.Transparent);
             public static readonly BindableProperty BorderWidthProperty = BindableProperty.Create(nameof(BorderWidth), typeof(float), typeof(MyFrame));
-            public static readonly BindableProperty BorderColorProperty = BindableProperty.Create(nameof(BorderColor), typeof(Color), typeof(MyFrame));
+           
 
         public Color ShadowColor
             {

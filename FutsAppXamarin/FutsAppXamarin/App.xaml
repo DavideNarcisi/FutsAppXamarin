@@ -8,5 +8,6 @@
         <Color x:Key="blu_scuro">#094ba3</Color>
         <Color x:Key="giallino">#fffc95</Color>
         <Color x:Key="red">#f12213</Color>
+        <Color x:Key="gold">#fdd017</Color>
     </Application.Resources>
 </Application>

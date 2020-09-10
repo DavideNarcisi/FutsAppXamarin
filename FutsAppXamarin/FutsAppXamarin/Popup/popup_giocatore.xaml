@@ -24,7 +24,7 @@
         <Frame BackgroundColor="#7fffdd" CornerRadius="20" Padding="1,1,1,1"  >
             <StackLayout 
         Orientation="Vertical">
-                <Button Text="X" FontSize="25"  Padding="0,0,7,0" WidthRequest="30" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular" TextColor="#f12213" BackgroundColor="Transparent" HorizontalOptions="End" Clicked="Close"/>
+                <Button Text="X" FontSize="25"  Padding="0,0,10,0" WidthRequest="30" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular" TextColor="#f12213" BackgroundColor="Transparent" HorizontalOptions="End" Clicked="Close"/>
                 <Label
                 x:Name="username"
                 HorizontalOptions="Center"
@@ -148,8 +148,8 @@
                 HorizontalTextAlignment="center"
                 TextColor="#094ba3"
                 FontSize="16"
-                   Margin="0,5,0,0"/>
-                <Switch x:Name="amico" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Toggled="amico_Toggled"
+                   Margin="0,15,0,5"/>
+                <Switch x:Name="amico" HorizontalOptions="Center"  Toggled="amico_Toggled"
                    OnColor="#07a4f3" />
             </StackLayout>
         </Frame>

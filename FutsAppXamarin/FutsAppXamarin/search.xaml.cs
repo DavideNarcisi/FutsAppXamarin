@@ -15,6 +15,7 @@ namespace FutsAppXamarin
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class search : ContentPage
     {
+        List<Giocatore> Searchresult = new List<Giocatore>();
         List<Giocatore> giocatori;
         public search()
         {
@@ -22,11 +23,16 @@ namespace FutsAppXamarin
             //giocatori = new List<Giocatore>(Giocatore.players);
             //GiocatoriListView.ItemsSource =  new List<Giocatore>();
         }
-        private async void Giocatori_ItemTapped(object sender, ItemTappedEventArgs e)
+        private async void Giocatori_ItemTapped(object sender, EventArgs e)
         {
-            var giocatore = e.Item as Giocatore;
-
-            await Navigation.PushPopupAsync(new popup_giocatore(giocatore));
+            var but = sender as Button ;
+            var s = but.Text;
+            foreach (Giocatore g in Searchresult)
+                if (g.username.Equals(s))
+                {
+                    await Navigation.PushPopupAsync(new popup_giocatore(g));
+                    break;
+                }
             //await DisplayAlert("Giocatore premuto", "Giocatore : " + giocatore.username, "OK");
 
 
@@ -36,12 +42,12 @@ namespace FutsAppXamarin
 
                        string keyword = SearchBar.Text;
             //IEnumerable<string> searchResult = giocatori.Where(giocatori => giocatori.ToLower().Contains(keyword.ToLower());
-            List<Giocatore> Searchresult = new List<Giocatore> ();
+            
             giocatori = new List<Giocatore>(Giocatore.players);
             foreach (var g in giocatori)
             {
                 if (g.username.ToLower().Contains(keyword.ToLower()) && !g.username.Equals(Giocatore.user.username))
-                   Searchresult.Add(g);
+                 Searchresult.Add(g);
             }
 
 
