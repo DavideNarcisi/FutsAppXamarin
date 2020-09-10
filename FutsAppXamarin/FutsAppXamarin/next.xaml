@@ -13,8 +13,7 @@
 
 
             <ListView x:Name="PartiteListView"
-                  HasUnevenRows="True"
-                      >
+                  HasUnevenRows="True" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
