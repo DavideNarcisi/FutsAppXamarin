@@ -5,10 +5,59 @@
              Title="NEXT"
              IconImageSource="ic_event_note_black_24dp.xml">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Orientation="Vertical" BackgroundColor="Aquamarine">
+            <Label Text="Prossimo Evento"
+               FontSize="40"/>
+             
+
+
+            <ListView x:Name="PartiteListView"
+                  HasUnevenRows="True"
+                      >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Grid  Margin="10" Padding="25" BackgroundColor="#fdd017" >                      
+                                <StackLayout Orientation="Horizontal">
+                                    <StackLayout Orientation="Vertical">
+                                <Label Text="Organizzatore"
+                                       Margin="5,0,0,0"/>
+                                     
+                                      
+                                    </StackLayout>
+                                            
+
+                                <StackLayout Orientation="Vertical"> 
+
+                                <Label Text="{Binding data}"
+                                    FontSize="24"                                       
+                                     TextColor="#07a4f3"
+                                       Margin="50,0,0,0"/>
+
+                                <Label Text="{Binding orario}"
+                                    FontSize="24"
+                                     TextColor="#07a4f3"
+                                       Margin="50,0,0,0"/>
+
+                                <Label Text="{Binding luogo}"
+                                    FontSize="24"
+                                     TextColor="#07a4f3"
+                                       Margin="50,0,0,0"/>
+                                </StackLayout>
+
+                            </StackLayout>
+                            </Grid>
+
+                        </ViewCell>
+
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+
+            </ListView>
+
         </StackLayout>
+
     </ContentPage.Content>
+
 </ContentPage>

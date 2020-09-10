@@ -9,9 +9,9 @@ namespace FutsAppXamarin.Model
     public class Match
     {
         public IList teams { get; set; }
-        private String data { get; set; }
-        private String orario { get; set; }
-        private String luogo { get; set; }
+        public String data { get; set; }
+        public String orario { get; set; }
+        public String luogo { get; set; }
 
         public String risultato { get; set; }
         public IList golgioc { get; set; }

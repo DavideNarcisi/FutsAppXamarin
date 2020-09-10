@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FutsAppXamarin.Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,10 +12,18 @@ namespace FutsAppXamarin
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class next : ContentPage
-    {
+     {
+        List<Match> partite;
+
         public next()
         {
             InitializeComponent();
+            partite = new List<Match>(Match.daFare);
+            PartiteListView.ItemsSource = partite;
+             
+             
+          
+
         }
     }
 }
