@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="FutsAppXamarin.Popup.popup_giocatore"
+    xmlns:local="clr-namespace:FutsAppXamarin.Model"
+    xmlns:image="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+
+    <Frame BackgroundColor="#094ba3" CornerRadius="20" Padding="5,5,5,5"  Margin="15,30">
+        <Frame BackgroundColor="#7fffdd" CornerRadius="20" Padding="1,1,1,1"  >
+            <StackLayout 
+        Orientation="Vertical">
+                <Button Text="X" FontSize="25"  Padding="0,0,7,0" WidthRequest="30" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular" TextColor="#f12213" BackgroundColor="Transparent" HorizontalOptions="End" Clicked="Close"/>
+                <Label
+                x:Name="username"
+                HorizontalOptions="Center"
+                FontSize="35"
+                FontFamily="titoli.ttf#titoli"
+                TextColor="#07a4f3"/>
+                <image:CircleImage BorderColor="#094ba3" BorderThickness="2" HeightRequest="150"  WidthRequest="150" x:Name="profile_image" Source="utente.png"/>
+
+
+
+                <Grid Margin="0,20,0,20" HorizontalOptions="Fill">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="30" />
+                        <RowDefinition Height="30" />
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label
+                FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                Text="GIOCATE"
+                HorizontalTextAlignment="center"
+                HorizontalOptions="CenterAndExpand"
+                TextColor="#094ba3"
+                FontSize="12" />
+
+                    <Label
+                Grid.Column="1"
+                FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                Text="VINTE"
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="center"
+                TextColor="#094ba3"
+                FontSize="12" />
+
+                    <Label
+                    Grid.Column="2"
+                FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                Text="PAREGGI"
+                HorizontalTextAlignment="center"
+                HorizontalOptions="CenterAndExpand"
+                TextColor="#094ba3"
+                FontSize="12" />
+
+                    <Label
+                    Grid.Column="3"
+                FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                Text="PERSE"
+                HorizontalTextAlignment="center"
+                HorizontalOptions="CenterAndExpand"
+                TextColor="#094ba3"
+                FontSize="12" />
+
+                    <Label
+                    Grid.Column="4"
+                FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                Text="GOL"
+                HorizontalTextAlignment="center"
+                HorizontalOptions="CenterAndExpand"
+                TextColor="#094ba3"
+                FontSize="12" />
+
+
+
+                    <Label
+                Grid.Row="1"
+                FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                x:Name="giocate"
+                HorizontalTextAlignment="center"
+                    HorizontalOptions="CenterAndExpand"
+                TextColor="#094ba3"
+                FontSize="12" />
+
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="1"
+                FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                x:Name="vinte"
+                HorizontalTextAlignment="center"
+                    HorizontalOptions="CenterAndExpand"
+                TextColor="#094ba3"
+                FontSize="12" />
+
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="2"
+                FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                x:Name="pareggi"
+                HorizontalTextAlignment="center"
+                    HorizontalOptions="CenterAndExpand"
+                TextColor="#094ba3"
+                FontSize="12" />
+
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="3"
+                FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                x:Name="perse"
+                HorizontalTextAlignment="center"
+                    HorizontalOptions="CenterAndExpand"
+                TextColor="#094ba3"
+                FontSize="12" />
+
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="4"
+                FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                x:Name="gol"
+                HorizontalTextAlignment="center"
+                    HorizontalOptions="CenterAndExpand"
+                TextColor="#094ba3"
+                FontSize="12" />
+                </Grid>
+                <Label FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                Text="Entra nella sua lista"
+                HorizontalTextAlignment="center"
+                TextColor="#094ba3"
+                FontSize="16"
+                   Margin="0,5,0,0"/>
+                <Switch x:Name="amico" HorizontalOptions="Center" VerticalOptions="CenterAndExpand" Toggled="amico_Toggled"
+                   OnColor="#07a4f3" />
+            </StackLayout>
+        </Frame>
+    </Frame>
+</pages:PopupPage>

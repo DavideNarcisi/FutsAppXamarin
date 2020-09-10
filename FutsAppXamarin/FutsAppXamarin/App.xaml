@@ -7,7 +7,6 @@
         <Color x:Key="azzurro">#07a4f3</Color>
         <Color x:Key="blu_scuro">#094ba3</Color>
         <Color x:Key="giallino">#fffc95</Color>
-        <Color x:Key="red">#F12213</Color>
-
+        <Color x:Key="red">#f12213</Color>
     </Application.Resources>
 </Application>

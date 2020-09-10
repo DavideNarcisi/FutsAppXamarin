@@ -9,6 +9,7 @@ namespace FutsAppXamarin.Model
     public interface IDataSave
     {
         Task<bool> SetMatch(string luogo, int data, string ora, IList<string> giocatori);
+        Task<int> SaveMatch(int totale_casa, int totale_ospiti, int[] golgiocA, int[] golgiocB, IList<string> teams, string id);
     }
     public class DataSave
     {
@@ -18,5 +19,11 @@ namespace FutsAppXamarin.Model
         {
             return save.SetMatch(luogo,data,ora,giocatori);
         }
+
+        public static Task<int> SaveMatch(int totale_casa, int totale_ospiti, int[] golgiocA, int[] golgiocB, IList<string> teams, string id)
+        {
+            return save.SaveMatch(totale_casa, totale_ospiti, golgiocA, golgiocB, teams, id);
+        }
+
     }
 }

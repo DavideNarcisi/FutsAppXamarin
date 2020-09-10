@@ -5,10 +5,10 @@
              Title="nuova_partita">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
-            <Entry x:Name="luogo" Placeholder="luogo" TextColor="#094ba3" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"/>
+            <Entry x:Name="luogo" Placeholder="luogo" TextColor="#094ba3" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular" PropertyChanged="luogo_PropertyChanged"/>
             
-            <DatePicker x:Name="dataPick" Format="D" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" TextColor="#094ba3" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"></DatePicker>
-            <TimePicker x:Name="oraPick" Format="T" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"  TextColor="#094ba3" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"></TimePicker>
+            <DatePicker x:Name="dataPick" Format="D" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" TextColor="#094ba3" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular" PropertyChanged="dataPick_PropertyChanged"></DatePicker>
+            <TimePicker x:Name="oraPick" Format="T" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"  TextColor="#094ba3" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular" PropertyChanged="oraPick_PropertyChanged"></TimePicker>
             
 
             <StackLayout Orientation="Horizontal">
