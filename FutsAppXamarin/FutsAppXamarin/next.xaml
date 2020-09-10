@@ -1,26 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:image="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:image="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              x:Class="FutsAppXamarin.next"
              Title="NEXT"
              IconImageSource="ic_event_note_black_24dp"
             >
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical" BackgroundColor="Aquamarine">
-            <Label Text="Prossimo Evento"
-               FontSize="40"/>
-             
-
-
+        <StackLayout Orientation="Vertical">
             <ListView x:Name="PartiteListView"
-                  HasUnevenRows="True" >
+                  HasUnevenRows="True"
+                      ItemTapped="PartiteListView_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
 
-                            <Frame BackgroundColor="#094ba3" CornerRadius="20" Padding="5,5,5,5"  >
-                                <Frame BackgroundColor="#fffc95" CornerRadius="20" Padding="1,1,1,1"  > 
-                                    <Grid  Margin="10" Padding="15" BackgroundColor="#fffc95" >
+                            <Frame BackgroundColor="#094ba3" CornerRadius="20" HeightRequest="170" Margin="15,5,15,5" Padding="5,5,5,5"  >
+                                <Frame BackgroundColor="#fffc95" CornerRadius="20" Padding="1,1,1,1"  >
+                                    <Grid  Margin="10" Padding="10" BackgroundColor="#fffc95" >
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="*"></RowDefinition>
                                             <RowDefinition Height="*"></RowDefinition>
@@ -30,38 +27,45 @@
                                             <ColumnDefinition Width="5*"></ColumnDefinition>
                                             <ColumnDefinition Width="4*"></ColumnDefinition>
                                         </Grid.ColumnDefinitions>
-                                    
-                                <Label Text="Organizzatore" FontSize="Large" TextColor="DarkBlue"  HorizontalTextAlignment="Center"                                   
-                                       />
-                                        <image:CircleImage Grid.RowSpan="2" Grid.Row="1" HorizontalOptions="Center"
-                                            BorderColor="#094ba3" BorderThickness="3" HeightRequest="150"  WidthRequest="150"  Source="utente.png" />
 
+                                        <StackLayout Orientation="Vertical">
+                                        <Label Grid.Column="0" HeightRequest="22"
+                                            Text="Organizzatore" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular" FontSize="14" 
+                                               TextColor="#094ba3"  HorizontalTextAlignment="Center" VerticalTextAlignment="Start" Margin="0,0,0,5"/>
+                                        <image:CircleImage  Grid.Column="0"  HorizontalOptions="Center"  VerticalOptions="Center"
+                                            BorderColor="#094ba3" BorderThickness="3"  HeightRequest="100" Source="{Binding profile_image}" />
+                                        </StackLayout>
                                         <Label Text="{Binding data}"
                                                Grid.Column="1"
-                                    FontSize="19"          
+                                               FontSize="16" 
+                                               VerticalOptions="Center"
+                                               FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
                                                FontAttributes="Bold"
-                                     TextColor="#07a4f3"
+                                               TextColor="#094ba3"
                                         />
 
-                                <Label Text="{Binding orario}"
-                                       Grid.Column="1"
-                                       Grid.Row="1"
-                                    FontSize="19"
-                                     TextColor="#07a4f3"
-                                       FontAttributes="Bold"
+                                        <Label Text="{Binding orario}"
+                                            Grid.Column="1"
+                                            Grid.Row="1"
+                                            FontSize="16"
+                                            TextColor="#094ba3"
+                                               VerticalOptions="Center"
+                                            FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                                            FontAttributes="Bold"
                                         />
 
-                                <Label Text="{Binding luogo}"
-                                       Grid.Column="1"
-                                       Grid.Row="2"
-                                    FontSize="19"
-                                       FontAttributes="Bold"
-                                      
-                                     TextColor="#07a4f3"
+                                        <Label Text="{Binding luogo}"
+                                            Grid.Column="1"
+                                            Grid.Row="2"
+                                            FontSize="16"
+                                            FontAttributes="Bold"
+                                               VerticalOptions="Center"
+                                            FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                                            TextColor="#094ba3"
                                        
-                                      />
-                                                            
-                             </Grid>
+                                             />
+
+                                    </Grid>
                                 </Frame>
                             </Frame>
 

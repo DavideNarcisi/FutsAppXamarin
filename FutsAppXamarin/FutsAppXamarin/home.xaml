@@ -8,7 +8,7 @@
             >
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
-            <StackLayout HorizontalOptions="Fill" VerticalOptions="Start" BackgroundColor="Aquamarine">
+            <!--<StackLayout HorizontalOptions="Fill" VerticalOptions="Start" BackgroundColor="Aquamarine">
            
                 <Label Text="ULTIMA PARTITA"
                        FontSize="30"
@@ -19,8 +19,29 @@
 
                 <Label x:Name="risultato" FontSize="35"  FontFamily="titoli.ttf#titoli"  HorizontalOptions="FillAndExpand"
                    HorizontalTextAlignment="Center"/>
-            </StackLayout>
-            <StackLayout>
+            </StackLayout>-->
+            <Grid HeightRequest="200">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="10"/>
+                </Grid.RowDefinitions>
+
+                <Image Source="campo.jpg" Aspect="AspectFill" Grid.RowSpan="5" />
+                <Label Text="ULTIMA PARTITA"
+                       FontSize="30"
+                       Grid.Row="1"
+                   FontFamily="titoli.ttf#titoli"
+                   TextColor="#ffff00"
+                   HorizontalOptions="Center"
+                   HorizontalTextAlignment="Center" />
+
+                <Label x:Name="risultato"  Text="" Grid.Row="2" Grid.RowSpan="2" FontSize="35" TextColor="#ffff00" FontFamily="titoli.ttf#titoli"  
+                   HorizontalTextAlignment="Center"/>
+            </Grid>
+            <StackLayout Orientation="Vertical" VerticalOptions="Center">
                 <Button Text="INSERISCI RISULTATO" Clicked="gestisci_click" x:Name="inserisci"
                         FontFamily="titoli.ttf#titoli"
                         TextColor="#07a4f3"
