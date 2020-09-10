@@ -1,4 +1,7 @@
-﻿using System;
+﻿using FutsAppXamarin.Popup;
+using Rg.Plugins.Popup.Extensions;
+using Rg.Plugins.Popup.Services;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,7 +25,9 @@ namespace FutsAppXamarin
         private async void Giocatori_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             var giocatore = e.Item as Giocatore;
-            await DisplayAlert("Giocatore premuto", "Giocatore : " + giocatore.username, "OK");
+
+            await Navigation.PushPopupAsync(new popup_giocatore(giocatore));
+            //await DisplayAlert("Giocatore premuto", "Giocatore : " + giocatore.username, "OK");
 
 
         }
@@ -35,13 +40,12 @@ namespace FutsAppXamarin
             giocatori = new List<Giocatore>(Giocatore.players);
             foreach (var g in giocatori)
             {
-
-                if (g.username.ToLower().Contains(keyword.ToLower()))
+                if (g.username.ToLower().Contains(keyword.ToLower()) && !g.username.Equals(Giocatore.user.username))
                    Searchresult.Add(g);
             }
 
 
-            GiocatoriListView.ItemsSource =  Searchresult;
+            GiocatoriListView.ItemsSource = Searchresult;
          }
 
     }

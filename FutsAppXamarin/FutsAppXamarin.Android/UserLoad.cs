@@ -61,13 +61,14 @@ namespace FutsAppXamarin.Droid
                     {
                         Dictionary<string, object> map = new Dictionary<string, object>
                         {
-                            {"gol fatti",(int) (long) doc.Get("gol fatti") },
+                            { "gol fatti",(int) (long) doc.Get("gol fatti") },
                             { "pareggi", (int) (long) doc.Get("pareggi")},
                             { "partite giocate", (int) (long) doc.Get("partite giocate")},
                             { "vittorie", (int) (long) doc.Get("vittorie")},
                             { "sconfitte", (int) (long) doc.Get("sconfitte")},
-                            { "amici", doc.Get("amici")}
+                            { "amici", (System.Collections.IList) doc.Get("amici")}
                         };
+
                         Giocatore g = new Giocatore(doc.Get("username").ToString(), map);
                         lista.Add(g);
                         if (doc.Get("username").Equals(username))

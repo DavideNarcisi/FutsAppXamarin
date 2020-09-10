@@ -24,14 +24,24 @@ namespace FutsAppXamarin
 
         public async void Btn_Registra_Clicked(object sender, System.EventArgs e)
         {
-            if (!(await Auth.Register(username.Text, txtMail.Text, txtPass.Text)).Equals(""))
-            {
-                Application.Current.MainPage = new Splash();
-                Navigation.RemovePage(this);         
-            }
+            if (username.Text.Length == 0 || txtMail.Text.Length == 0 || txtPass.Text.Length == 0)
+                await DisplayAlert("Registrazione Fallita", "Riempire tutti i campi.", "OK");
             else
-                await DisplayAlert("Registrazione Fallita", "Riprova per favore", "OK");
-            
+            {
+                string result = await Auth.Register(username.Text, txtMail.Text, txtPass.Text);
+                if (!(result.Equals("")))
+                {
+                    if (!result.Equals("userdoppio"))
+                    {
+                        Application.Current.MainPage = new Splash();
+                        Navigation.RemovePage(this);
+                    }
+                    else
+                        await DisplayAlert("Registrazione Fallita", "Username già scelto", "OK");
+                }
+                else
+                    await DisplayAlert("Registrazione Fallita", "Riprova per favore", "OK");
+            }
         }
     }
 }

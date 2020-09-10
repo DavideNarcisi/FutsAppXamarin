@@ -4,10 +4,67 @@
              x:Class="FutsAppXamarin.NuovaPartita"
              Title="nuova_partita">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Orientation="Vertical">
+            <Entry x:Name="luogo" Placeholder="luogo" TextColor="#094ba3" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular" PropertyChanged="luogo_PropertyChanged"/>
+            
+            <DatePicker x:Name="dataPick" Format="D" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" TextColor="#094ba3" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular" PropertyChanged="dataPick_PropertyChanged"></DatePicker>
+            <TimePicker x:Name="oraPick" Format="T" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"  TextColor="#094ba3" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular" PropertyChanged="oraPick_PropertyChanged"></TimePicker>
+            
+
+            <StackLayout Orientation="Horizontal">
+            <ListView x:Name="SquadraA"
+                  HasUnevenRows="True"
+                  ItemTapped="Giocatori_Clicked_A" HorizontalOptions="Start">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout Orientation="Horizontal">
+
+                                <Label Text="{Binding username}"
+                                    FontSize="24"
+                                    TextColor="#094ba3"
+                                    FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"/>
+
+
+                            </StackLayout>
+
+                        </ViewCell>
+
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+                <ListView x:Name="SquadraB"
+                  HasUnevenRows="True"
+                  ItemTapped="Giocatori_Clicked_B"
+                          HorizontalOptions="End">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+
+
+
+                                    <Label Text="{Binding username}"
+                                    FontSize="24"
+                                    TextColor="#F12213"
+                                    FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"/>
+
+
+                                </StackLayout>
+
+                            </ViewCell>
+
+                        </DataTemplate>
+
+                    </ListView.ItemTemplate>
+
+                </ListView>
+            </StackLayout>
+
+            <Button Text="Salva" Clicked="Button_Clicked" BackgroundColor="#07a4f3" VerticalOptions="End" HorizontalOptions="Center"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

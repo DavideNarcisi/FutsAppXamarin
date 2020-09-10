@@ -89,8 +89,24 @@ namespace FutsAppXamarin.Droid
             }
             Match.daFare = dafare.ToArray();
             Match.giocate = giocate.ToArray();
+            Ordina();
             Match.daRegistrare = daregistrare.ToArray();
         }
+
+        private void Ordina()
+        {
+            Match m;
+            int i = 0;
+            while (i < (Match.giocate.Length - 1 - i))
+            {
+                m = Match.giocate[i];
+                Match.giocate[i] = Match.giocate[Match.giocate.Length - 1 - i];
+                Match.giocate[Match.giocate.Length - 1 - i] = m;
+                i++;
+            }
+
+        }
+
         private String ConvertData(int data)
         {
             int giorno = data % 100;
@@ -98,6 +114,8 @@ namespace FutsAppXamarin.Droid
             int anno = (data - (mese * 100) - giorno) / 10000 % 10000;
             return giorno + "-" + mese + "-" + anno;
         }
+
+
 
     }
 }

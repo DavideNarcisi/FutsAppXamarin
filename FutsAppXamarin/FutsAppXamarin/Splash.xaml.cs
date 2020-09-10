@@ -26,12 +26,14 @@ namespace FutsAppXamarin
             if (!(await UserLoad.LoadUser(user) && await DataLoad.LoadMatch(user)))
             {
                 await DisplayAlert("ERRORE", "Connessione debole o assente", "CHIUDI APP");
-                 }
+                Navigation.PopAsync();
+            }
 
             else
+            {
                 Application.Current.MainPage = new NavigationPage(new MainPage());
-
-            Navigation.RemovePage(this);
+                Navigation.RemovePage(this);
+            }
         }
     }
 }
