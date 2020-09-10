@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:image="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              x:Class="FutsAppXamarin.next"
              Title="NEXT"
              IconImageSource="ic_event_note_black_24dp"
@@ -18,36 +18,53 @@
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <Grid  Margin="10" Padding="25" BackgroundColor="#fdd017" >                      
-                                <StackLayout Orientation="Horizontal">
-                                    <StackLayout Orientation="Vertical">
-                                <Label Text="Organizzatore"
-                                       Margin="5,0,0,0"/>
-                                     
-                                      
-                                    </StackLayout>
-                                            
 
-                                <StackLayout Orientation="Vertical"> 
+                            <Frame BackgroundColor="#094ba3" CornerRadius="20" Padding="5,5,5,5"  >
+                                <Frame BackgroundColor="#fffc95" CornerRadius="20" Padding="1,1,1,1"  > 
+                                    <Grid  Margin="10" Padding="15" BackgroundColor="#fffc95" >
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"></RowDefinition>
+                                            <RowDefinition Height="*"></RowDefinition>
+                                            <RowDefinition Height="*" ></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="5*"></ColumnDefinition>
+                                            <ColumnDefinition Width="4*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+                                    
+                                <Label Text="Organizzatore" FontSize="Large" TextColor="DarkBlue"  HorizontalTextAlignment="Center"                                   
+                                       />
+                                        <image:CircleImage Grid.RowSpan="2" Grid.Row="1" HorizontalOptions="Center"
+                                            BorderColor="#094ba3" BorderThickness="3" HeightRequest="150"  WidthRequest="150"  Source="utente.png" />
 
-                                <Label Text="{Binding data}"
-                                    FontSize="24"                                       
+                                        <Label Text="{Binding data}"
+                                               Grid.Column="1"
+                                    FontSize="19"          
+                                               FontAttributes="Bold"
                                      TextColor="#07a4f3"
-                                       Margin="50,0,0,0"/>
+                                        />
 
                                 <Label Text="{Binding orario}"
-                                    FontSize="24"
+                                       Grid.Column="1"
+                                       Grid.Row="1"
+                                    FontSize="19"
                                      TextColor="#07a4f3"
-                                       Margin="50,0,0,0"/>
+                                       FontAttributes="Bold"
+                                        />
 
                                 <Label Text="{Binding luogo}"
-                                    FontSize="24"
+                                       Grid.Column="1"
+                                       Grid.Row="2"
+                                    FontSize="19"
+                                       FontAttributes="Bold"
+                                      
                                      TextColor="#07a4f3"
-                                       Margin="50,0,0,0"/>
-                                </StackLayout>
-
-                            </StackLayout>
-                            </Grid>
+                                       
+                                      />
+                                                            
+                             </Grid>
+                                </Frame>
+                            </Frame>
 
                         </ViewCell>
 
