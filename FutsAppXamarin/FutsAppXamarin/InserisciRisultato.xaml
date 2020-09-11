@@ -2,18 +2,20 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FutsAppXamarin.InserisciRisultato"
-             Title="inserisci">
+             BackgroundImageSource="background_default.xml"
+             >
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical" BackgroundColor="Aquamarine">
+        <StackLayout Orientation="Vertical" >
 
 
             <ListView x:Name="ListaDaRegistrare"
-                      HasUnevenRows="True">
+                      HasUnevenRows="True"
+                      ItemTapped="ListaDaRegistrare_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
 
-                            <Frame BackgroundColor="#D71818" CornerRadius="23" Padding="5,5,5,5" Margin="10,5" >
+                            <Frame BackgroundColor="#D71818" CornerRadius="23" Padding="5,5,5,5" Margin="45,10" >
                                 <Frame BackgroundColor="White" CornerRadius="20" Padding="1,1,1,1"  >
                                     <Grid  Margin="10" Padding="15" BackgroundColor="White" HorizontalOptions="Center">
                                         <Grid.RowDefinitions>

@@ -134,13 +134,13 @@ namespace FutsAppXamarin.Droid
 
         private void RegistraGiocatore(CollectionReference coll, string esito, Giocatore d, int gol)
         {
-            Dictionary<string, Java.Lang.Object> map = new Dictionary<string, Java.Lang.Object>()
+            Dictionary<string, int> map = new Dictionary<string, int>()
             { 
-                {"gol fatti",(int) (long) d.dati["gol fatti"]},
-                { "pareggi", (int) (long)d.dati["pareggi"]},
-                { "partite giocate", (int) (long)d.dati["partite giocate"]},
-                { "vittorie", (int) (long) d.dati["vittorie"]},
-                { "sconfitte", (int) (long) d.dati["sconfitte"]}               
+                {"gol fatti",int.Parse(d.dati["gol fatti"].ToString())},
+                { "pareggi", int.Parse(d.dati["pareggi"].ToString())},
+                { "partite giocate", int.Parse(d.dati["partite giocate"].ToString())},
+                { "vittorie", int.Parse(d.dati["vittorie"].ToString())},
+                { "sconfitte", int.Parse(d.dati["sconfitte"].ToString())}               
             };
             
             coll.Document(d.username).Update("gol fatti", ((int)map["gol fatti"] + gol),

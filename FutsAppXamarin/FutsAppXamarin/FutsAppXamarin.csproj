@@ -28,9 +28,6 @@
     <Compile Update="home.xaml.cs">
       <DependentUpon>home.xaml</DependentUpon>
     </Compile>
-    <Compile Update="InserisciRisultato.xaml.cs">
-      <DependentUpon>InserisciRisultato.xaml</DependentUpon>
-    </Compile>
     <Compile Update="LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
@@ -59,6 +56,9 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Popup\popup_giocatore.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Popup\popup_inserisci_partita.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Popup\popup_partita_giocata.xaml">

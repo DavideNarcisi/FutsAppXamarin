@@ -1,4 +1,6 @@
 ﻿using FutsAppXamarin.Model;
+using FutsAppXamarin.Popup;
+using Rg.Plugins.Popup.Extensions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,6 +21,13 @@ namespace FutsAppXamarin
             InitializeComponent();
             PartitaDaRegistrare = new List<Match>(Match.daRegistrare);
             ListaDaRegistrare.ItemsSource = PartitaDaRegistrare;
+        }
+
+        private void ListaDaRegistrare_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            if (sender is ListView lv) lv.SelectedItem = null;
+            var partita = e.Item as Match;
+            Navigation.PushPopupAsync(new popup_inserisci_partita(partita));
         }
     }
 }
