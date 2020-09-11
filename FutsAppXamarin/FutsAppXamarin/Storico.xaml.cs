@@ -1,4 +1,6 @@
-﻿using System;
+﻿using FutsAppXamarin.Model;
+using Network;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +14,12 @@ namespace FutsAppXamarin
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class Storico : ContentPage
     {
+        List<Match> PartitaStorico;
         public Storico()
         {
             InitializeComponent();
+            PartitaStorico = new List<Match>(Match.giocate);
+            ListaStorico.ItemsSource = PartitaStorico;
         }
     }
 }
