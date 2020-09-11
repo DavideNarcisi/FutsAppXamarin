@@ -28,6 +28,9 @@
     <Compile Update="home.xaml.cs">
       <DependentUpon>home.xaml</DependentUpon>
     </Compile>
+    <Compile Update="InserisciRisultato.xaml.cs">
+      <DependentUpon>InserisciRisultato.xaml</DependentUpon>
+    </Compile>
     <Compile Update="LoginPage.xaml.cs">
       <DependentUpon>LoginPage.xaml</DependentUpon>
     </Compile>
@@ -43,7 +46,7 @@
     <EmbeddedResource Update="home.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Inserisci.xaml">
+    <EmbeddedResource Update="InserisciRisultato.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="next.xaml">

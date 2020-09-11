@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="FutsAppXamarin.InserisciRisultato"
+             Title="inserisci">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" BackgroundColor="Aquamarine">
+
+
+            <ListView x:Name="ListaDaRegistrare"
+                      HasUnevenRows="True">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <Frame BackgroundColor="#D71818" CornerRadius="23" Padding="5,5,5,5" Margin="10,5" >
+                                <Frame BackgroundColor="White" CornerRadius="20" Padding="1,1,1,1"  >
+                                    <Grid  Margin="10" Padding="15" BackgroundColor="White" HorizontalOptions="Center">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"></RowDefinition>
+                                            <RowDefinition Height="*"></RowDefinition>
+                                            <RowDefinition Height="*" ></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                                            <ColumnDefinition Width="4*"></ColumnDefinition>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Image HorizontalOptions="Center"  VerticalOptions="Center"
+                                            Source="ic_date_range_red_24dp.xml" />
+
+                                        <Image Grid.Row="1"  HorizontalOptions="Center"  VerticalOptions="Center"
+                                            Source="ic_access_time_red_24dp.xml" />
+
+                                        <Image Grid.Row="2"  HorizontalOptions="Center"  VerticalOptions="Center"
+                                            Source="ic_place_red_24dp.xml" />
+
+                                        <Label Text="{Binding data}"
+                                        Grid.Column="1"
+                                        FontSize="19"          
+                                        FontAttributes="Bold"
+                                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                                        TextColor="#D71818"
+                                        />
+
+                                        <Label Text="{Binding orario}"
+                                        Grid.Column="1"
+                                        Grid.Row="1"
+                                        FontSize="19"
+                                        FontAttributes="Bold"
+                                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                                        TextColor="#D71818"
+                                        />
+
+                                        <Label Text="{Binding luogo}"
+                                        Grid.Column="1"
+                                        Grid.Row="2"
+                                        FontSize="19"
+                                        FontAttributes="Bold"
+                                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                                        TextColor="#D71818"
+                                       
+                                      />
+
+                                    </Grid>
+                                </Frame>
+                            </Frame>
+
+                        </ViewCell>
+
+                    </DataTemplate>
+
+                </ListView.ItemTemplate>
+
+            </ListView>
+
+        </StackLayout>
+
+    </ContentPage.Content>
+
+</ContentPage>
