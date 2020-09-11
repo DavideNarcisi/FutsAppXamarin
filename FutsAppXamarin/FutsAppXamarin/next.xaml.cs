@@ -26,23 +26,11 @@ namespace FutsAppXamarin
             partite = new List<Match>(Match.daFare);
             PartiteListView.ItemsSource = partite;
             
-            SetImmagine();
+            
 
         }
 
-         private async void SetImmagine()
-         {
-            foreach (Match m in partite)
-            {
-                ImageSource img = await new ImageHelper().LoadImage("milito"); //m.teams[0].ToString()
-                if (!img.Equals(null))
-                    m.profile_image = img;                                  
-            }
-
-            PartiteListView.ItemsSource = partite;
-
-
-        }
+        
 
         private void PartiteListView_ItemTapped(object sender, ItemTappedEventArgs e)
         {

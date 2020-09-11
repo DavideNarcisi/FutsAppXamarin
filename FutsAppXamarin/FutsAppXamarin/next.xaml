@@ -5,6 +5,7 @@
              x:Class="FutsAppXamarin.next"
              Title="NEXT"
              IconImageSource="ic_event_note_black_24dp"
+             BackgroundImageSource="background_default.xml"
             >
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
@@ -15,7 +16,7 @@
                     <DataTemplate>
                         <ViewCell>
 
-                            <Frame BackgroundColor="#094ba3" CornerRadius="23" HeightRequest="170" Margin="15,5,15,5" Padding="5,5,5,5"  >
+                            <Frame BackgroundColor="#fdd017" CornerRadius="23" HeightRequest="170" Margin="15,5,15,5" Padding="5,5,5,5"  >
                                 <Frame BackgroundColor="#fffc95" CornerRadius="20" Padding="1,1,1,1"  >
                                     <Grid  Margin="10" Padding="10" BackgroundColor="#fffc95" >
                                         <Grid.RowDefinitions>
@@ -33,7 +34,7 @@
                                             Text="Organizzatore" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular" FontSize="14" 
                                                TextColor="#094ba3"  HorizontalTextAlignment="Center" VerticalTextAlignment="Start" Margin="0,0,0,5"/>
                                         <image:CircleImage  Grid.Column="0"  HorizontalOptions="Center"  VerticalOptions="Center"
-                                            BorderColor="#094ba3" BorderThickness="3"  HeightRequest="100" Source="{Binding profile_image}" />
+                                            BorderColor="#fdd017" BorderThickness="3"  HeightRequest="100" Source="{Binding profile_image}" />
                                         </StackLayout>
                                         <Label Text="{Binding data}"
                                                Grid.Column="1"

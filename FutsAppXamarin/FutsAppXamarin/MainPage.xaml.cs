@@ -1,4 +1,5 @@
-﻿using System;
+﻿using FutsAppXamarin.Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -21,10 +22,18 @@ namespace FutsAppXamarin
             Xamarin.Forms.Application.Current.SavePropertiesAsync();
             On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
             tabbed_page.CurrentPage = Children[1];
-
+            SetImmagine();
         }
 
-
+        private async void SetImmagine()
+        {
+            foreach (Match m in Match.daFare)
+            {
+                ImageSource img = await new ImageHelper().LoadImage("milito"); //m.teams[0].ToString()
+                if (!img.Equals(null))
+                    m.profile_image = img;
+            }
+        }
     }
 
 }

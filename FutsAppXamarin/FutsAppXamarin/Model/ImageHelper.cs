@@ -21,6 +21,7 @@ namespace FutsAppXamarin.Model
                 .Child("images")
                 .Child(fileName)
                 .PutAsync(fileStream);
+            
             return imageUrl;
         }
 
