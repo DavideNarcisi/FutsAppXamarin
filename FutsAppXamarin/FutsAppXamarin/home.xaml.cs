@@ -20,7 +20,9 @@ namespace FutsAppXamarin
             InitializeComponent();
             Application.Current.Properties["logged"] = "true";
             Application.Current.SavePropertiesAsync();
-
+            risultato.Text = Match.giocate[0].risultato;
+            Console.WriteLine("aaaaaaaaaaa");
+            Console.WriteLine(Match.giocate[0].risultato);
         }
 
         

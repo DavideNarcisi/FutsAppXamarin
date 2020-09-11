@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Text;
+using Xamarin.Forms;
 
 namespace FutsAppXamarin.Model
 {
@@ -16,6 +17,7 @@ namespace FutsAppXamarin.Model
         public String risultato { get; set; }
         public IList golgioc { get; set; }
 
+        public ImageSource profile_image { get; set; }
         public static Match[] daFare;
         public static Match[] giocate;
         public static Match[] daRegistrare;
@@ -27,6 +29,11 @@ namespace FutsAppXamarin.Model
             this.orario = orario;
             this.luogo = luogo;
             this.risultato = risultato;
+            if (risultato.Length < 6)
+            {
+                Image img = new Image { Source = "user.png" };
+                profile_image = img.Source;
+            }
         }
 
         
