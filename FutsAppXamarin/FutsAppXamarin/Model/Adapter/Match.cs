@@ -29,7 +29,7 @@ namespace FutsAppXamarin.Model
             this.orario = orario;
             this.luogo = luogo;
             this.risultato = risultato;
-            if (risultato.Length < 6)
+            if (risultato.Length > 6)
             {
                 Image img = new Image { Source = "user.png" };
                 profile_image = img.Source;

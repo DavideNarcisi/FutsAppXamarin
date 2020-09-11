@@ -10,19 +10,21 @@ using Xamarin.Forms.PlatformConfiguration.AndroidSpecific;
 
 namespace FutsAppXamarin
 {
-    
-    public partial class MainPage: MasterDetailPage
+
+    public partial class MainPage
     {
         public MainPage()
         {
-            
+
             InitializeComponent();
             Xamarin.Forms.Application.Current.Properties["firstrun"] = "false";
             Xamarin.Forms.Application.Current.SavePropertiesAsync();
-            
+            On<Android>().SetToolbarPlacement(ToolbarPlacement.Bottom);
+            tabbed_page.CurrentPage = Children[1];
+
         }
 
-       
+
     }
 
 }

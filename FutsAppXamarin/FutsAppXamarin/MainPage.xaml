@@ -1,25 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FutsAppXamarin.MainPage"
-             xmlns:local="clr-namespace:FutsAppXamarin"
-              
-             >
+
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
+            x:Class="FutsAppXamarin.MainPage"
+            xmlns:pages="clr-namespace:FutsAppXamarin"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core" 
+            android:TabbedPage.ToolbarPlacement="Bottom"
+            BarBackgroundColor="#fffc95"            
+            SelectedTabColor="#07a4f3"
+            UnselectedTabColor="#353e47"
+            x:Name="tabbed_page"
+            >
+
     <NavigationPage.TitleView>
         <Label Text="FUTSAPP" FontFamily="titoli.ttf#titoli" TextColor="#07a4f3" FontSize="24" VerticalTextAlignment="Center"/>
     </NavigationPage.TitleView>
-    <MasterDetailPage.Master>
-        <ContentPage Title="Master" Padding="10" BackgroundColor="White" IconImageSource="menu.png">
-            <ContentPage.Content>
-                <StackLayout Margin="5,30,5,5">
-                    
-                </StackLayout>
-            </ContentPage.Content>
-        </ContentPage>
-    </MasterDetailPage.Master>
+    <pages:search/>
+    <pages:home />
+    <pages:next/>
 
-    <MasterDetailPage.Detail>
-        <local:fragment_container/>
-    </MasterDetailPage.Detail>
 
-</MasterDetailPage>
+</TabbedPage>
