@@ -13,11 +13,16 @@ namespace FutsAppXamarin
         public static Giocatore[] players;
         public static Giocatore[] amici;
         public static Giocatore user;
+        public string Goal { get; set;  }
+        public string Vinte { get; set; }
 
         public Giocatore(string username, Dictionary<string, object> dati)
         {
             this.username = username;
             this.dati = dati;
+            this.Goal = dati["gol fatti"].ToString();
+            this.Vinte = dati["vittorie"].ToString();
+
         }
 
         public Giocatore(string username)
