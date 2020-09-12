@@ -10,14 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace FutsAppXamarin
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Classifiche : ContentPage
+    public partial class PaginaClassifiche : ContentPage
     {
-        List<Giocatore> classifica;
-        public Classifiche()
+        public PaginaClassifiche()
         {
             InitializeComponent();
-            classifica = new List<Giocatore>(Giocatore.players);
-            ClassificaListView.ItemsSource = classifica;
         }
     }
 }
