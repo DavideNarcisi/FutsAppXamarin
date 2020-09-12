@@ -34,13 +34,13 @@ namespace FutsAppXamarin.Droid
         {
             hasRead = 0;
             this.username = username;
-            FirebaseFirestore.Instance.Collection("utenti").Get().AddOnCompleteListener(this);
-            for (int i = 0; i < 25; i++)
+            await FirebaseFirestore.Instance.Collection("utenti").Get().AddOnCompleteListener(this);
+            /*for (int i = 0; i < 25; i++)
             {
                 await System.Threading.Tasks.Task.Delay(100);
                 if (hasRead!=0)
                     break;
-            }
+            }*/
             if (hasRead == 1)
                 return true;
             else

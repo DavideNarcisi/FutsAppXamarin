@@ -31,6 +31,7 @@ namespace FutsAppXamarin
                 MainPage = new LoginPage();
             }
                
+            MainPage = new LoginPage();
         }
 
         protected override void OnStart()

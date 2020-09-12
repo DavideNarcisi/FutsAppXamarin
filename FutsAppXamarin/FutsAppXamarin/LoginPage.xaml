@@ -2,34 +2,43 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"  
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"  
              x:Class="FutsAppXamarin.Pages.LoginPage"  
+             xmlns:local="clr-namespace:FutsAppXamarin.Model"
              BackgroundImageSource="background_default.xml">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" Padding="30" Spacing="40">
-            <Label Text="ACCEDI" FontSize="50" TextColor="#ffff00" FontFamily="titoli.ttf#titoli"/>
-            <Frame HasShadow="False">
+            <Label Text="ACCEDI" FontSize="50" TextColor="#ffff00" HorizontalOptions="Center" FontFamily="titoli.ttf#titoli"/>
+            
                 <StackLayout Orientation="Vertical" Spacing="10">
-                    <Entry x:Name="Email" Placeholder="Email"   
-                           HeightRequest="40" 
+                    <local:MyText x:Name="Email" Placeholder="Email"   
+                            HorizontalOptions="FillAndExpand"
                            Keyboard="Email"  
-                           
+                           Margin="40,10,40,10"
+                           FontSize="18"
+                           FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
                            TextColor="#094ba3"/>
-                    <Entry x:Name="Password" Placeholder="Password"   
-                          
-                          
-                           HeightRequest="40"   
+                    <local:MyText x:Name="Password" Placeholder="Password"   
+                           FontSize="18"
+                                  Margin="40,10,40,10"
+                           FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                           HorizontalOptions="FillAndExpand"  
                            IsPassword="True"  
                            TextColor="#094ba3"/>
                 </StackLayout>
-            </Frame>
-            <Button Text="Login" TextColor="White"  
-                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand" 
-                    Clicked="btn_Log"
-                     />
+           
 
-            <Button Text="Registrati" TextColor="White"  
-                    FontAttributes="Bold" FontSize="Large" HorizontalOptions="FillAndExpand"  
-                    Clicked="btn_Reg"
-                    />
+            <Button Text="Login" BackgroundColor="#fdd017" BorderColor="#ffff00" BorderWidth="6"
+                    FontAttributes="Bold" FontSize="18" HorizontalOptions="Center" 
+                    Clicked="btn_Log" TextColor="#07a4f3" CornerRadius="10" WidthRequest="150"
+                    Margin="0,30,0,0" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                     />
+            <StackLayout Orientation="Vertical" VerticalOptions="End" Margin="0,0,0,20">
+                <Label Text="Non sei ancora registrato?" Margin="0,0,0,15" HorizontalOptions="Center"
+                       TextColor="#ffff00"/>
+                <Button Text="Registrati"  FontSize="14" HorizontalOptions="Center"  
+                    Clicked="btn_Reg" BackgroundColor="#fdd017" BorderColor="#ffff00" BorderWidth="6"
+                    FontAttributes="Bold" TextColor="#07a4f3" CornerRadius="10" WidthRequest="120"
+                     FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"/>
+            </StackLayout>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>  

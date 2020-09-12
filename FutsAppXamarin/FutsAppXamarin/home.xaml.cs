@@ -37,7 +37,25 @@ namespace FutsAppXamarin
                 normale.IsVisible = false;
             }
 
-            
+            try
+            {
+                if (Match.daFare.Length != 0 && Match.daFare.Length != 1)
+                {
+                    inserisci.Text = Match.daFare.Length + " risultati da inserire";
+                    inserisci.BackgroundColor = Color.FromHex("#f12213");
+                }
+                else if (Match.daFare.Length == 1)
+                {
+                    inserisci.Text = Match.daFare.Length + " risultato da inserire";
+                    inserisci.BackgroundColor = Color.FromHex("#f12213");
+                }
+            }
+            catch (Exception err)
+            {
+                
+            }
+
+
         }
 
         
