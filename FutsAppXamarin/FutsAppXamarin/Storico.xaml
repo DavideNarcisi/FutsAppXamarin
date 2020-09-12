@@ -5,18 +5,19 @@
              Title="storico"
              BackgroundImageSource="background_default.xml">
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical" BackgroundColor="Aquamarine">
+        <StackLayout Orientation="Vertical">
 
 
             <ListView x:Name="ListaStorico"
-                  HasUnevenRows="True" >
+                  HasUnevenRows="True"
+                      ItemTapped="ListaStorico_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
 
-                            <Frame BackgroundColor="#094ba3" CornerRadius="23" Padding="5,5,5,5" Margin="10,5" >
-                                <Frame BackgroundColor="#fffc95" CornerRadius="20" Padding="1,1,1,1"  >
-                                    <Grid  Margin="10" Padding="15" BackgroundColor="#fffc95" >
+                            <Frame BackgroundColor="#fdd017" CornerRadius="23" Padding="5,5,5,5" Margin="10,5" >
+                                <Frame BackgroundColor="{Binding colore}" CornerRadius="20" Padding="1,1,1,1"  >
+                                    <Grid  Margin="10" Padding="15" BackgroundColor="Transparent" >
                                         <Grid.RowDefinitions>
                                             <RowDefinition Height="*"></RowDefinition>
                                             <RowDefinition Height="*"></RowDefinition>
@@ -27,38 +28,45 @@
                                             <ColumnDefinition Width="4*"></ColumnDefinition>
                                         </Grid.ColumnDefinitions>
 
-                                        <Label Text="Risultato" FontSize="19" TextColor="DarkBlue"  HorizontalTextAlignment="Center"                                   
-                                       />
+                                        <Label Text="Risultato" FontSize="18" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular" 
+                                               TextColor="White"  HorizontalTextAlignment="Center"/>
 
                                         <Label Text="{Binding risultato}"
                                                Grid.RowSpan="2" Grid.Row="1" HorizontalTextAlignment="Center"
-                                    FontSize="36"          
+                                               VerticalOptions="Center"
+                                               FontFamily="titoli.ttf#titoli"
+                                                FontSize="30"          
                                                FontAttributes="Bold"
-                                     TextColor="#07a4f3"
-                                        />
+                                                TextColor="White"/>
 
                                         <Label Text="{Binding data}"
                                                Grid.Column="1"
-                                    FontSize="19"          
+                                                FontSize="16" 
+                                               VerticalOptions="Center"
+                                               FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"          
                                                FontAttributes="Bold"
-                                     TextColor="#07a4f3"
+                                     TextColor="White"
                                         />
 
                                         <Label Text="{Binding orario}"
                                        Grid.Column="1"
                                        Grid.Row="1"
-                                    FontSize="19"
-                                     TextColor="#07a4f3"
+                                    FontSize="16" 
+                                        VerticalOptions="Center"
+                                       FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                                     TextColor="white"
                                        FontAttributes="Bold"
                                         />
 
                                         <Label Text="{Binding luogo}"
                                        Grid.Column="1"
                                        Grid.Row="2"
-                                    FontSize="19"
+                                       FontSize="16" 
+                                       VerticalOptions="Center"
+                                       FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
                                        FontAttributes="Bold"
                                       
-                                     TextColor="#07a4f3"
+                                     TextColor="white"
                                        
                                       />
 

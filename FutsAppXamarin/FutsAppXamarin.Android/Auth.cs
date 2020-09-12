@@ -14,9 +14,9 @@ using Android.Widget;
 [assembly: Xamarin.Forms.Dependency(typeof(FutsAppXamarin.Droid.Auth))]
 namespace FutsAppXamarin.Droid
 {
-    public class Auth : FutsAppXamarin.Model.IAuth
+    public class Auth : Java.Lang.Object,FutsAppXamarin.Model.IAuth,IOnCompleteListener
     {
-        
+        bool presente=false;
         public Auth()
         {
         }
@@ -63,14 +63,17 @@ namespace FutsAppXamarin.Droid
                 return false;
             }
         }
-  
-       
+
+        
+
         public async Task<string> Register(string N, string E, string P) 
         {
             try
             {
-                if ((await RegisterUser(N)) == 1)
+                var result = await RegisterUser(N);
+                if (result == 1)
                 {
+                    
                     var create = await FirebaseAuth.Instance.CreateUserWithEmailAndPasswordAsync(E, P);
                     var profileUpdates = new Firebase.Auth.UserProfileChangeRequest.Builder().SetDisplayName(N);
                     profileUpdates.SetDisplayName(N);
@@ -83,7 +86,7 @@ namespace FutsAppXamarin.Droid
                     await Application.Current.SavePropertiesAsync();
                     return token.Token;
                 }
-                else if ((await RegisterUser(N)) == 0)
+                else if (result == 0)
                     return "userdoppio";
                 else return "";
             }
@@ -97,24 +100,32 @@ namespace FutsAppXamarin.Droid
 
         private async Task<int> RegisterUser(string user)
         {
-            Java.Util.ArrayList amici = new Java.Util.ArrayList();
-            amici.Add(Giocatore.user.username);
             Dictionary<string, Java.Lang.Object> map = new Dictionary<string, Java.Lang.Object>();
-            map.Add("username", user);
-            map.Add("partite giocate", 0);
-            map.Add("vittorie", 0);
-            map.Add("pareggi", 0);
-            map.Add("sconfitte", 0);
-            map.Add("gol fatti", 0);
-            map.Add("amici", amici);
-            if (!FirebaseFirestore.Instance.Collection("utenti").Document(user).Get().IsSuccessful)
+            
+                Java.Util.ArrayList amici = new Java.Util.ArrayList();
+                amici.Add(user);
+                
+                map.Add("username", user);
+                map.Add("partite giocate", 0);
+                map.Add("vittorie", 0);
+                map.Add("pareggi", 0);
+                map.Add("sconfitte", 0);
+                map.Add("gol fatti", 0);
+                map.Add("amici", amici);
+
+            await FirebaseFirestore.Instance.Collection("utenti").WhereEqualTo("username",user).Get().AddOnCompleteListener(this);
+            
+            if (!presente)
             {
                 try
                 {
+                    
                     await Firebase.Firestore.FirebaseFirestore.Instance.Collection("utenti").Document(user).Set(map);
                 }
                 catch (FirebaseFirestoreException exc)
                 {
+                    exc.PrintStackTrace();
+                    
                     return 2;
                 }
             }
@@ -123,6 +134,22 @@ namespace FutsAppXamarin.Droid
             return 1;
         }
 
-
+        public void OnComplete(Android.Gms.Tasks.Task task)
+        {
+            if (task.IsSuccessful)
+            {
+                var snapshot = (QuerySnapshot)task.Result;
+                if (!snapshot.IsEmpty)
+                {
+                    presente = true;
+                    
+                }
+                else
+                {
+                    presente = false;
+                   
+                }
+            }
+        }
     }
 }

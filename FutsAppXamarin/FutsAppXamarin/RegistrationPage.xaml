@@ -1,17 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:FutsAppXamarin.Model"
              x:Class="FutsAppXamarin.RegistrationPage"
              BackgroundImageSource="background_default.xml">
     <ContentPage.Content>
-        <StackLayout Spacing="5" Margin="5,0" Padding="0" Visual="Default" Orientation="Vertical" VerticalOptions="StartAndExpand">
-            <Label Text="ENTRA IN FUTSAPP" FontSize="40" FontAttributes="Bold"  Margin="5,0,0,0" TextColor="#000000" FontFamily="titoli.ttf#titoli"></Label>
+        <StackLayout Spacing="5" Margin="5,0" Orientation="Vertical" VerticalOptions="StartAndExpand" HorizontalOptions="Fill">
+            <Label Text="ENTRA IN FUTSAPP" FontSize="40"  HorizontalTextAlignment="Center" HorizontalOptions="Fill"
+                   Margin="5,0,0,0" TextColor="#ffff00" FontFamily="titoli.ttf#titoli"></Label>
 
-            <Entry x:Name="username" Placeholder="Username"/>
-            <Entry x:Name="txtMail" Placeholder="Email" Keyboard="Email"/>
-            <Entry x:Name="txtPass" Placeholder="Password" IsPassword="True"/>
-            <Button x:Name="btnRegistra" Clicked="Btn_Registra_Clicked" Text="Registrati"  BackgroundColor="#000000" TextColor="White"/>
-            
+            <local:MyText x:Name="username" Placeholder="Username"                             
+                           FontSize="18" Margin="40,10,40,10" HorizontalOptions="FillAndExpand"
+                           FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                           TextColor="#094ba3"/>
+            <local:MyText x:Name="txtMail" Placeholder="Email" Keyboard="Email"                          
+                           FontSize="18" Margin="40,10,40,10" HorizontalOptions="FillAndExpand"
+                           FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                           TextColor="#094ba3"/>
+            <local:MyText x:Name="txtPass" Placeholder="Password" IsPassword="True"                        
+                           Margin="40,10,40,10" HorizontalOptions="FillAndExpand"
+                           FontSize="18"
+                           FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                           TextColor="#094ba3"/>
+            <Button x:Name="btnRegistra" Clicked="Btn_Registra_Clicked" Text="Registrati"  
+                    BackgroundColor="#fdd017" BorderColor="#ffff00" BorderWidth="6"
+                    FontAttributes="Bold" FontSize="18" HorizontalOptions="Center" 
+                    TextColor="#07a4f3" CornerRadius="10" WidthRequest="150"
+                    Margin="0,30,0,0" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

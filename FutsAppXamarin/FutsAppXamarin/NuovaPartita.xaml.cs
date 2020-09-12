@@ -71,7 +71,6 @@ namespace FutsAppXamarin
 
             SquadraA.ItemsSource = listaA;
             SquadraB.ItemsSource = listaB;
-
         }
 
 
@@ -100,41 +99,44 @@ namespace FutsAppXamarin
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            if(luogo.Text.Equals(""))
-            {
-                await DisplayAlert("ERRORE", "Riempire tutti i campi", "OK");
-                return;
-            }
-
-            if (teamA[4].Equals("aggiungi") || teamB[4].Equals("aggiungi"))
-            {
-                await DisplayAlert("ERRORE", "Completa le squadre", "OK");
-                return;
-            }
-            foreach (var s in teamA)
-            {
-                
-                foreach (var s1 in teamB)
-                { if (s1.Equals(s))
-                    {
-                        await DisplayAlert("ERRORE", "Stesso giocatore in due squadre", "OK");
-                        return;
-                    }
-                  
+           
+                if (place.Equals(""))
+                {
+                    await DisplayAlert("ERRORE", "Riempire tutti i campi", "OK");
+                    return;
                 }
-            }
 
-            ora = oraPick.Time.ToString();
-            y = dataPick.Date.Year;
-            m = dataPick.Date.Month;
-            g = dataPick.Date.Day;
-            string[] arr = new string[10];
-            teamA.CopyTo(arr, 0);
-            teamB.CopyTo(arr, 5);
-            if (await DataSave.SetMatch(luogo.Text, y * 10000 + m * 100 + g, ora, new List<string>(arr)))
-                Navigation.PopAsync();
-            
-            else await DisplayAlert("ERRORE", "Problema nel savataggio dati", "OK");            
+                if (teamA[4].Equals("aggiungi") || teamB[4].Equals("aggiungi"))
+                {
+                    await DisplayAlert("ERRORE", "Completa le squadre", "OK");
+                    return;
+                }
+                foreach (var s in teamA)
+                {
+
+                    foreach (var s1 in teamB)
+                    {
+                        if (s1.Equals(s))
+                        {
+                            await DisplayAlert("ERRORE", "Stesso giocatore in due squadre", "OK");
+                            return;
+                        }
+
+                    }
+                }
+
+                ora = oraPick.Time.ToString();
+                y = dataPick.Date.Year;
+                m = dataPick.Date.Month;
+                g = dataPick.Date.Day;
+                string[] arr = new string[10];
+                teamA.CopyTo(arr, 0);
+                teamB.CopyTo(arr, 5);
+                if (await DataSave.SetMatch(luogo.Text, y * 10000 + m * 100 + g, ora, new List<string>(arr)))
+                    Navigation.PopAsync();
+
+                else await DisplayAlert("ERRORE", "Problema nel savataggio dati", "OK");
+           
         }
 
         private async void Giocatori_Clicked_B(object sender, ItemTappedEventArgs e)

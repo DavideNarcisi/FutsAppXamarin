@@ -1,0 +1,338 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage
+        xmlns="http://xamarin.com/schemas/2014/forms"
+        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+        x:Class="FutsAppXamarin.Popup.popup_partita_giocata"
+        xmlns:local="clr-namespace:FutsAppXamarin.Model"
+        xmlns:image="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+        xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+        xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup">
+    <pages:PopupPage.Animation>
+        <animations:ScaleAnimation 
+            PositionIn="Center"
+            PositionOut="Center"
+            ScaleIn="1.2"
+            ScaleOut="0.8"
+            DurationIn="400"
+            DurationOut="300"
+            EasingIn="SinOut"
+            EasingOut="SinIn"
+            HasBackgroundAnimation="True"/>
+    </pages:PopupPage.Animation>
+
+    <Frame BackgroundColor="#094ba3" CornerRadius="23" Padding="4,4,4,4"  Margin="15,30">
+        <Frame BackgroundColor="#f0ffff" CornerRadius="20" Padding="1,1,1,1"  >
+            <StackLayout 
+        Orientation="Vertical">
+                <Grid HorizontalOptions="Fill" Margin="15,15,5,0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="2*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button Grid.RowSpan="2" Grid.Column="2" Text="X" FontSize="25"  
+                                     FontFamily="Audiowide-Regular.ttf#Audiowide-Regular" 
+                                    TextColor="#f12213" BackgroundColor="Transparent"
+                                    HorizontalOptions="End" Clicked="Close"/>
+                    <Label x:Name="data" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                           FontSize="16" TextColor="#094ba3" VerticalOptions="Center"/>
+
+                    <Label x:Name="ora" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                           FontSize="16" TextColor="#094ba3" VerticalOptions="Center" Grid.Row="1"/>
+
+                    <Label x:Name="luogo" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                           FontSize="20" TextColor="#094ba3" VerticalOptions="Center" Grid.Column="1"
+                           Grid.RowSpan="2"/>
+                </Grid>
+
+
+                
+
+                <Grid Margin="10,60,20,20" HorizontalOptions="Fill" VerticalOptions="Center" HeightRequest="300">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="auto"/>
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+                        <RowDefinition Height="*" />
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="7*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="7*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="CASA" TextColor="#fdd017" HorizontalTextAlignment="Center" 
+                           FontFamily="titoli.ttf#titoli" FontSize="35"
+                           Grid.Column="0" Grid.ColumnSpan="3" Grid.Row="0"/>
+
+                    <Label Text="OSPITI" TextColor="#fdd017" HorizontalTextAlignment="Center" 
+                           FontFamily="titoli.ttf#titoli" FontSize="35" Grid.Row="0"
+                           Grid.Column="3" Grid.ColumnSpan="3"/>
+
+
+                    <Label Text="gol" FontSize="12" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                           TextColor="#094ba3" Grid.ColumnSpan="2" Grid.Column="1" HorizontalTextAlignment="Center"
+                           Grid.Row="1"/>
+                    <Label Text="gol" FontSize="12" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                           TextColor="#094ba3" Grid.ColumnSpan="2" Grid.Column="4" HorizontalTextAlignment="Center"
+                           Grid.Row="1"/>                   
+                   
+
+                    <Label
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                        x:Name="giocatoreA0"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        Padding="0,5,0,5"
+                        TextColor="#07a4f3"
+                        FontSize="16" 
+                        Grid.Row="2"/>
+
+                    <Label
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                        x:Name="giocatoreA1"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        Padding="0,5,0,5"
+                        TextColor="#07a4f3"
+                        FontSize="16"
+                        Grid.Row="3"/>
+
+                    <Label
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                        x:Name="giocatoreA2"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        Padding="0,5,0,5"
+                        TextColor="#07a4f3"
+                        FontSize="16"
+                        Grid.Row="4"/>
+
+                    <Label
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                        x:Name="giocatoreA3"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        Padding="0,5,0,5"
+                        TextColor="#07a4f3"
+                        FontSize="16"
+                        Grid.Row="5"/>
+
+                    <Label
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                        x:Name="giocatoreA4"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        Padding="0,5,0,5"
+                        TextColor="#07a4f3"
+                        FontSize="16"
+                        Grid.Row="6"/>
+
+                    
+                    
+                 
+                    <Label
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                        x:Name="golA0"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        Padding="0,5,0,5"
+                        TextColor="#094ba3"
+                        FontSize="18" 
+                        Grid.Row="2"
+                        Grid.Column="1"/>
+
+                    <Label
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                        x:Name="golA1"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        Padding="0,5,0,5"
+                        TextColor="#094ba3"
+                        FontSize="18"
+                        Grid.Row="3"
+                        Grid.Column="1"/>
+
+                    <Label
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                        x:Name="golA2"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        Padding="0,5,0,5"
+                        TextColor="#094ba3"
+                        FontSize="18"
+                        Grid.Row="4"
+                        Grid.Column="1"/>
+
+                    <Label
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                        x:Name="golA3"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        Padding="0,5,0,5"
+                        TextColor="#094ba3"
+                        FontSize="18"
+                        Grid.Row="5"
+                        Grid.Column="1"/>
+
+                    <Label
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                        x:Name="golA4"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        Padding="0,5,0,5"
+                        TextColor="#094ba3"
+                        FontSize="18"
+                        Grid.Row="6"
+                        Grid.Column="1"/>
+
+
+
+
+                    <Image Source="pallone.jpg" Aspect="AspectFit" VerticalOptions="Center" Grid.Column="2" Grid.Row="2"/>
+                    <Image Source="pallone.jpg" Aspect="AspectFit" VerticalOptions="Center" Grid.Column="2" Grid.Row="3"/>
+                    <Image Source="pallone.jpg" Aspect="AspectFit" VerticalOptions="Center" Grid.Column="2" Grid.Row="4"/>
+                    <Image Source="pallone.jpg" Aspect="AspectFit" VerticalOptions="Center" Grid.Column="2" Grid.Row="5"/>
+                    <Image Source="pallone.jpg" Aspect="AspectFit" VerticalOptions="Center" Grid.Column="2" Grid.Row="6"/>
+                    
+                    <Label
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                        x:Name="giocatoreB0"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        Padding="0,5,0,5"
+                        TextColor="#07a4f3"
+                        FontSize="16"
+                        Grid.Row="2"
+                        Grid.Column="3"/>
+
+                    <Label
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                        x:Name="giocatoreB1"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        Padding="0,5,0,5"
+                        TextColor="#07a4f3"
+                        FontSize="16"
+                        Grid.Column="3"
+                        Grid.Row="3"/>
+
+                    <Label
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                        x:Name="giocatoreB2"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        Padding="0,5,0,5"
+                        TextColor="#07a4f3"
+                        FontSize="16"
+                        Grid.Column="3"
+                        Grid.Row="4"/>
+
+                    <Label
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                        x:Name="giocatoreB3"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        Padding="0,5,0,5"
+                        TextColor="#07a4f3"
+                        FontSize="16"
+                        Grid.Column="3"
+                        Grid.Row="5"/>
+
+                    <Label
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                        x:Name="giocatoreB4"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        Padding="0,5,0,5"
+                        TextColor="#07a4f3"
+                        FontSize="16"
+                        Grid.Column="3"
+                        Grid.Row="6"/>
+
+
+
+
+                    <Label
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                        x:Name="golB0"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        Padding="0,5,0,5"
+                        TextColor="#094ba3"
+                        FontSize="18" 
+                        Grid.Row="2"
+                        Grid.Column="4"/>
+
+                    <Label
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                        x:Name="golB1"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        Padding="0,5,0,5"
+                        TextColor="#094ba3"
+                        FontSize="18"
+                        Grid.Row="3"
+                        Grid.Column="4"/>
+
+                    <Label
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                        x:Name="golB2"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        Padding="0,5,0,5"
+                        TextColor="#094ba3"
+                        FontSize="18"
+                        Grid.Row="4"
+                        Grid.Column="4"/>
+
+                    <Label
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                        x:Name="golB3"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        Padding="0,5,0,5"
+                        TextColor="#094ba3"
+                        FontSize="18"
+                        Grid.Row="5"
+                        Grid.Column="4"/>
+
+                    <Label
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                        x:Name="golB4"
+                        HorizontalTextAlignment="Center"
+                        VerticalTextAlignment="Center"
+                        Padding="0,5,0,5"
+                        TextColor="#094ba3"
+                        FontSize="18"
+                        Grid.Row="6"
+                        Grid.Column="4"/>
+
+
+
+
+                    <Image Source="pallone.jpg" Aspect="AspectFit" VerticalOptions="Center" Grid.Column="5" Grid.Row="2"/>
+                    <Image Source="pallone.jpg" Aspect="AspectFit" VerticalOptions="Center" Grid.Column="5" Grid.Row="3"/>
+                    <Image Source="pallone.jpg" Aspect="AspectFit" VerticalOptions="Center" Grid.Column="5" Grid.Row="4"/>
+                    <Image Source="pallone.jpg" Aspect="AspectFit" VerticalOptions="Center" Grid.Column="5" Grid.Row="5"/>
+                    <Image Source="pallone.jpg" Aspect="AspectFit" VerticalOptions="Center" Grid.Column="5" Grid.Row="6"/>
+
+
+
+                </Grid>
+            </StackLayout>
+        </Frame>
+    </Frame>
+</pages:PopupPage>

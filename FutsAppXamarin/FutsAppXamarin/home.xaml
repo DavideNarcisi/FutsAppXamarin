@@ -20,7 +20,10 @@
                 <Label x:Name="risultato" FontSize="35"  FontFamily="titoli.ttf#titoli"  HorizontalOptions="FillAndExpand"
                    HorizontalTextAlignment="Center"/>
             </StackLayout>-->
-            <Grid HeightRequest="200">
+
+            <Image HeightRequest="200" Aspect="AspectFill" Source="campo_prima_volta.jpg"
+                   IsVisible="False" x:Name="prima"/>
+            <Grid HeightRequest="200" x:Name="normale">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="10"/>
                     <RowDefinition Height="auto"/>
@@ -42,7 +45,7 @@
                    HorizontalTextAlignment="Center"/>
             </Grid>
             <StackLayout Orientation="Vertical" VerticalOptions="Center">
-                <Button Text="INSERISCI RISULTATO" Clicked="gestisci_click" x:Name="inserisci"
+                <Button Text="HAI 0 RISULTATI DA INSERIRE" Clicked="gestisci_click" x:Name="inserisci"
                         FontFamily="titoli.ttf#titoli"
                         TextColor="#07a4f3"
                         FontSize="18"

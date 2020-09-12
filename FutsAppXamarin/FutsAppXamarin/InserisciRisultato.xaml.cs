@@ -1,6 +1,5 @@
 ﻿using FutsAppXamarin.Model;
 using FutsAppXamarin.Popup;
-using Network;
 using Rg.Plugins.Popup.Extensions;
 using System;
 using System.Collections.Generic;
@@ -14,21 +13,21 @@ using Xamarin.Forms.Xaml;
 namespace FutsAppXamarin
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class Storico : ContentPage
+    public partial class InserisciRisultato : ContentPage
     {
-        List<Match> PartitaStorico;
-        public Storico()
+        List<Match> PartitaDaRegistrare;
+        public InserisciRisultato()
         {
             InitializeComponent();
-            PartitaStorico = new List<Match>(Match.giocate);
-            ListaStorico.ItemsSource = PartitaStorico;
+            PartitaDaRegistrare = new List<Match>(Match.daRegistrare);
+            ListaDaRegistrare.ItemsSource = PartitaDaRegistrare;
         }
 
-        private void ListaStorico_ItemTapped(object sender, ItemTappedEventArgs e)
+        private void ListaDaRegistrare_ItemTapped(object sender, ItemTappedEventArgs e)
         {
             if (sender is ListView lv) lv.SelectedItem = null;
             var partita = e.Item as Match;
-            Navigation.PushPopupAsync(new popup_partita_giocata(partita));
+            Navigation.PushPopupAsync(new popup_inserisci_partita(partita));
         }
     }
 }

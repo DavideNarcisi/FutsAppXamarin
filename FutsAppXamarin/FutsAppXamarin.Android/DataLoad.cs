@@ -34,15 +34,16 @@ namespace FutsAppXamarin.Droid
         {
             hasRead = 0;
             this.username = username;
-            Firebase.Firestore.FirebaseFirestore.Instance.Collection("partite")
+            await Firebase.Firestore.FirebaseFirestore.Instance.Collection("partite")
                 .WhereArrayContains("giocatori", username)
                 .OrderBy("data",Query.Direction.Ascending).Get().AddOnCompleteListener(this);
-            for (int i = 0; i < 25; i++)
+           
+            /*for (int i = 0; i < 25; i++)
             {
                 await System.Threading.Tasks.Task.Delay(100);
                 if (hasRead != 0)
                     break;
-            }
+            }*/
             if (hasRead == 1)
                 return true;
             else
@@ -91,6 +92,7 @@ namespace FutsAppXamarin.Droid
             Match.giocate = giocate.ToArray();
             Ordina();
             Match.daRegistrare = daregistrare.ToArray();
+            
         }
 
         private void Ordina()
