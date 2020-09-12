@@ -33,6 +33,7 @@ namespace FutsAppXamarin
             {
                 Application.Current.MainPage = new NavigationPage(new MainPage());
                 Navigation.RemovePage(this);
+               
             }
         }
     }

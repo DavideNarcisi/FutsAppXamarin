@@ -1,4 +1,6 @@
 ﻿using FutsAppXamarin.Model;
+using FutsAppXamarin.Popup;
+using Rg.Plugins.Popup.Extensions;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -33,6 +35,11 @@ namespace FutsAppXamarin
                 if (!img.Equals(null))
                     m.profile_image = img;
             }
+        }
+
+        private void ImageButton_Clicked(object sender, EventArgs e)
+        {
+            Navigation.PushPopupAsync(new popup_menu());
         }
     }
 

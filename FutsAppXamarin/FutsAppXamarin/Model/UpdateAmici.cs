@@ -16,6 +16,9 @@ namespace FutsAppXamarin.Model
 
         public static void UpdateFriends(IList<string> amici, string user)
         {
+            foreach(var a in amici)
+
+              Console.WriteLine(a);
             update.UpdateFriends(amici, user);
         }
 
