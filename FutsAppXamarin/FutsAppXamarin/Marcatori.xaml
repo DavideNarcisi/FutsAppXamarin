@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FutsAppXamarin.Marcatori">
+             x:Class="FutsAppXamarin.Marcatori"
+             Title="Marcatori">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
             <ListView x:Name="ClassificaListView"
@@ -10,7 +11,7 @@
                     <DataTemplate>
                         <ViewCell>
 
-                            <Frame BackgroundColor="DarkOliveGreen" CornerRadius="23" HeightRequest="70" Margin="15,5,15,5" Padding="25,5,5,5"  >
+                            <Frame BackgroundColor="LawnGreen" CornerRadius="23" HeightRequest="70" Margin="15,5,15,5" Padding="5,5,5,5"  >
                                 <Frame BackgroundColor="White" CornerRadius="20" Padding="1,1,1,1"  >
 
                                     <StackLayout Orientation="Horizontal">
@@ -18,7 +19,7 @@
                                         <Label Text="{Binding username}"
                                                FontSize="20" 
                                                VerticalOptions="Center"
-                                               HorizontalOptions="Center"
+                                               HorizontalOptions="CenterAndExpand"
                                                FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
                                                FontAttributes="Bold"
                                                TextColor="Green"
@@ -26,7 +27,7 @@
                                         <Label Text="{Binding Goal}"
                                                FontSize="20" 
                                                VerticalOptions="Center"
-                                               HorizontalOptions="Center"
+                                               HorizontalOptions="CenterAndExpand"
                                                FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
                                                FontAttributes="Bold"
                                                TextColor="Green"

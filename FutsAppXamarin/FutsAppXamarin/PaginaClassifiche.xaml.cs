@@ -10,11 +10,13 @@ using Xamarin.Forms.Xaml;
 namespace FutsAppXamarin
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class PaginaClassifiche : ContentPage
+    public partial class PaginaClassifiche
     {
         public PaginaClassifiche()
         {
             InitializeComponent();
         }
     }
+
+   
 }

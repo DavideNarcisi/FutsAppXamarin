@@ -69,7 +69,7 @@ namespace FutsAppXamarin
             else if (sender.Equals(nuova_partita))
                 Navigation.PushAsync(new NuovaPartita());
             else if (sender.Equals(classifiche))
-                Navigation.PushAsync(new Classifiche());
+                Navigation.PushAsync(new PaginaClassifiche());
         }
     }
 }

@@ -10,7 +10,8 @@ namespace FutsAppXamarin
         public App()
         {
             InitializeComponent();
-            if (Application.Current.Properties.ContainsKey("firstrun"))
+          if (Application.Current.Properties.ContainsKey("firstrun"))
+
             {
                 
                 if (Application.Current.Properties["firstrun"].ToString().Equals("false"))
@@ -29,9 +30,9 @@ namespace FutsAppXamarin
             {
                 
                 MainPage = new LoginPage();
-            }
-               
-            MainPage = new LoginPage();
+            } 
+              
+           
         }
 
         protected override void OnStart()

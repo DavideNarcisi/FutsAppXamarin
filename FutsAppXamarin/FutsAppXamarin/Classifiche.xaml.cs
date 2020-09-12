@@ -17,7 +17,9 @@ namespace FutsAppXamarin
         {
             InitializeComponent();
             classifica = new List<Giocatore>(Giocatore.players);
-            ClassificaListView.ItemsSource = classifica;
+                        ClassificaListView.ItemsSource = classifica;
         }
+       
+
     }
 }
