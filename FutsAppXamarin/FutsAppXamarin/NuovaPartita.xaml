@@ -2,69 +2,126 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FutsAppXamarin.NuovaPartita"
-             Title="nuova_partita">
+             Title="nuova_partita"
+             BackgroundImageSource="background_default.xml"
+             xmlns:local="clr-namespace:FutsAppXamarin.Model">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
-            <Entry x:Name="luogo" Placeholder="luogo" TextColor="#094ba3" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular" PropertyChanged="luogo_PropertyChanged"/>
-            
-            <DatePicker x:Name="dataPick" Format="D" VerticalOptions="CenterAndExpand" HorizontalOptions="Center" TextColor="#094ba3" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular" PropertyChanged="dataPick_PropertyChanged"></DatePicker>
-            <TimePicker x:Name="oraPick" Format="T" VerticalOptions="CenterAndExpand" HorizontalOptions="Center"  TextColor="#094ba3" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular" PropertyChanged="oraPick_PropertyChanged"></TimePicker>
-            
-
             <StackLayout Orientation="Horizontal">
-            <ListView x:Name="SquadraA"
-                  HasUnevenRows="True"
-                  ItemTapped="Giocatori_Clicked_A" HorizontalOptions="Start">
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell>
-                            <StackLayout Orientation="Horizontal">
 
-                                <Label Text="{Binding username}"
-                                    FontSize="24"
+                <local:MyDatePicker x:Name="dataPick"
+                                    Format="dd/MM/yyyy"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Margin="10"
                                     TextColor="#094ba3"
-                                    FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"/>
+                                    FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                                    PropertyChanged="dataPick_PropertyChanged">
+                </local:MyDatePicker>
 
 
-                            </StackLayout>
+                <local:MyTimePicker x:Name="oraPick"
+                                    Format="HH:mm"
+                                    VerticalOptions="CenterAndExpand"
+                                    HorizontalOptions="CenterAndExpand"
+                                    Margin="10"
+                                    TextColor="#094ba3"
+                                    FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                                    PropertyChanged="oraPick_PropertyChanged">
+                </local:MyTimePicker>
 
-                        </ViewCell>
+            </StackLayout>
 
-                    </DataTemplate>
+                <local:MyText x:Name="luogo"
+                              Placeholder="luogo"
+                              TextColor="#094ba3"
+                              Margin="70,5"
+                              HorizontalTextAlignment="Center"
+                              FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                              PropertyChanged="luogo_PropertyChanged"/>
 
-                </ListView.ItemTemplate>
-
-            </ListView>
-
-                <ListView x:Name="SquadraB"
-                  HasUnevenRows="True"
-                  ItemTapped="Giocatori_Clicked_B"
-                          HorizontalOptions="End">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+                <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                    <Label Text="CASA"
+                           FontSize="30"
+                           TextColor="#FFFF00"
+                           FontFamily="titoli.ttf#titoli"
+                           HorizontalTextAlignment="Center"/>
+                    <ListView x:Name="SquadraA"
+                              ItemTapped="Giocatori_Clicked_A"
+                              HorizontalOptions="CenterAndExpand">
                     <ListView.ItemTemplate>
-                        <DataTemplate>
-                            <ViewCell>
+                       <DataTemplate>
+                          <ViewCell>
                                 <StackLayout Orientation="Horizontal">
 
-
-
-                                    <Label Text="{Binding username}"
-                                    FontSize="24"
-                                    TextColor="#F12213"
-                                    FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"/>
-
+                                    <Frame BackgroundColor="#094ba3" CornerRadius="15" Padding="4" Margin="20,3" HorizontalOptions="FillAndExpand">
+                                        <Frame BackgroundColor="White" CornerRadius="12" Padding="4,2">
+                                            <Label Text="{Binding username}"
+                                                   FontSize="20"
+                                                   TextColor="#094ba3"
+                                                   FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                                                   
+                                                   HorizontalTextAlignment="Center"/>
+                                        </Frame>
+                                    </Frame>
 
                                 </StackLayout>
 
-                            </ViewCell>
+                          </ViewCell>
 
-                        </DataTemplate>
+                       </DataTemplate>
 
                     </ListView.ItemTemplate>
 
-                </ListView>
+                    </ListView>
+                    
+                </StackLayout>
+                
+                
+                
+                <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+                    <Label Text="OSPITI"
+                           FontSize="30"
+                           TextColor="#ffff00"
+                           FontFamily="titoli.ttf#titoli"
+                           HorizontalTextAlignment="Center"/>
+                    <ListView x:Name="SquadraB"
+                              ItemTapped="Giocatori_Clicked_B"
+                              HorizontalOptions="CenterAndExpand">
+                    <ListView.ItemTemplate>
+                       <DataTemplate>
+                          <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+
+                                    <Frame BackgroundColor="#F12213" CornerRadius="15" Padding="4" Margin="20,3" HorizontalOptions="FillAndExpand">
+                                        <Frame BackgroundColor="White" CornerRadius="12" Padding="4,2">
+                                            <Label Text="{Binding username}"
+                                                   FontSize="20"
+                                                   TextColor="#F12213"
+                                                   FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                                                   HorizontalTextAlignment="Center"/>
+                                        </Frame>
+                                    </Frame>
+
+                                </StackLayout>
+
+                          </ViewCell>
+
+                       </DataTemplate>
+
+                    </ListView.ItemTemplate>
+
+                    </ListView>
+                </StackLayout>
+
             </StackLayout>
 
-            <Button Text="Salva" Clicked="Button_Clicked" BackgroundColor="#07a4f3" VerticalOptions="End" HorizontalOptions="Center"/>
+            <Button Text="Salva"
+                    Clicked="Button_Clicked"
+                    BackgroundColor="#07a4f3"
+                    VerticalOptions="End"
+                    HorizontalOptions="Center"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -84,6 +84,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Auth.cs" />
+    <Compile Include="MyBorderTimePicker.cs" />
+    <Compile Include="MyBorderDatePicker.cs" />
     <Compile Include="DataLoad.cs" />
     <Compile Include="DataSave.cs" />
     <Compile Include="FriendsLoad.cs" />
