@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 using Xamarin.Forms;
+using Xamarin.Forms.Internals;
 using Xamarin.Forms.Xaml;
 
 namespace FutsAppXamarin.Popup
@@ -17,17 +18,23 @@ namespace FutsAppXamarin.Popup
         public popup_menu()
         {
             InitializeComponent();
+            username.Text = Giocatore.user.username;
         }
 
-        private void SwipeView_SwipeEnded(object sender, SwipeEndedEventArgs e)
-        {
-            Navigation.PopPopupAsync();
-        }
+      
 
         protected override bool OnBackButtonPressed()
         {
             Navigation.PopPopupAsync();
             return true;
+        }
+        void Menu_Click(object sender, EventArgs e)
+        {
+            if (sender.Equals(profile))
+                Navigation.PushAsync(new Profilo());
+            else if (sender.Equals(aboutus))
+                Navigation.PushAsync(new AboutUs());
+            Navigation.PopPopupAsync();
         }
     }
 }

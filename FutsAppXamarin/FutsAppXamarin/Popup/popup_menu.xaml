@@ -19,10 +19,59 @@
             EasingOut="SinIn"
             HasBackgroundAnimation="True"/>
     </pages:PopupPage.Animation>
-
-    <Frame BackgroundColor="#07a4f3" Margin="0,0,60,0">
-        
-
-        </Frame>
     
+         
+
+    <Frame BackgroundColor="#07a4f3" Margin="0,0,80,0" Padding="0,0,0,0">
+
+        <StackLayout Orientation="Vertical" Padding="0,0,0,0"> 
+        <StackLayout Orientation="Vertical" BackgroundColor="#fffc95" HeightRequest="250" HorizontalOptions="FillAndExpand" Margin="0,0,0,0">
+
+                <image:CircleImage BorderColor="#094ba3" BorderThickness="3" HeightRequest="150"  WidthRequest="150" x:Name="profile_image" Source="user.png"  Margin="20,15,0,15" HorizontalOptions="Start"/>
+
+                <Label x:Name="username" FontSize="24" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular" TextColor="#07a4f3" Padding="20,0,0,0" Margin="0,0,0,15" HorizontalOptions="Start"></Label>
+                <Label x:Name="mail" FontSize="24" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular" TextColor="#07a4f3" Padding="20,0,0,0" Margin="0,0,0,15" HorizontalOptions="Start"></Label>
+
+            </StackLayout>
+
+            
+        <StackLayout Orientation="Vertical" > 
+            <Button Text="PROFILO"  
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                    x:Name="profile"
+                    Clicked="Menu_Click"
+                        TextColor="Yellow"
+                        FontSize="18"
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        HorizontalOptions="StartAndExpand"
+                        Margin="20,5"/>
+            <Button Text="ABOUT US"  
+                    x:Name="aboutus"
+                    Clicked="Menu_Click"
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                        TextColor="Yellow"
+                        FontSize="18"
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        HorizontalOptions="StartAndExpand"
+                        Margin="20,5"/>
+            <Button Text="LOG OUT"  
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                        TextColor="Yellow"
+                        FontSize="18"
+                        BorderColor="Transparent"
+                        BackgroundColor="Transparent"
+                        HorizontalOptions="StartAndExpand"
+                        Margin="20,5"/>
+        </StackLayout>
+
+
+        </StackLayout>
+
+
+
+    </Frame>
+
+
 </pages:PopupPage>

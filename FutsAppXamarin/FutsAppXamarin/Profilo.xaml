@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:image="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             x:Class="FutsAppXamarin.Profilo"
+             Title="Profilo">
+    <Frame BackgroundColor="DimGray"  Padding="0,0,0,0"  Margin="0,0" >
+            <StackLayout 
+        Orientation="Vertical">
+                <Label
+                x:Name="username"
+                HorizontalOptions="Center"
+                FontSize="35"
+                FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                TextColor="White"/>
+                <image:CircleImage BorderColor="DarkGray" BorderThickness="3"  HeightRequest="200"  WidthRequest="200" x:Name="profile_image" Source="user.png"/>
+            <ImageButton Padding="20,0"  Source="ic_mode_edit_black_24dp">  </ImageButton>
+
+
+            <Grid Margin="0,40,0,40" HorizontalOptions="Fill">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="50" />
+                        <RowDefinition Height="50" />
+
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                        <ColumnDefinition Width="*" />
+                    </Grid.ColumnDefinitions>
+                    <Label
+                FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                Text="GIOCATE"
+                HorizontalTextAlignment="center"
+                HorizontalOptions="CenterAndExpand"
+                TextColor="White"
+                FontSize="12" />
+
+                    <Label
+                Grid.Column="1"
+                FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                Text="VINTE"
+                HorizontalOptions="CenterAndExpand"
+                HorizontalTextAlignment="center"
+                TextColor="White"
+                FontSize="12" />
+
+                    <Label
+                    Grid.Column="2"
+                FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                Text="PAREGGI"
+                HorizontalTextAlignment="center"
+                HorizontalOptions="CenterAndExpand"
+                TextColor="White"
+                FontSize="12" />
+
+                    <Label
+                    Grid.Column="3"
+                FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                Text="PERSE"
+                HorizontalTextAlignment="center"
+                HorizontalOptions="CenterAndExpand"
+                TextColor="White"
+                FontSize="12" />
+
+                    <Label
+                    Grid.Column="4"
+                FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                Text="GOL"
+                HorizontalTextAlignment="center"
+                HorizontalOptions="CenterAndExpand"
+                TextColor="White"
+                FontSize="12" />
+
+
+
+                    <Label
+                Grid.Row="1"
+                FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                x:Name="giocate"
+                HorizontalTextAlignment="center"
+                    HorizontalOptions="CenterAndExpand"
+                TextColor="White"
+                FontSize="12" />
+
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="1"
+                FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                x:Name="vinte"
+                HorizontalTextAlignment="center"
+                    HorizontalOptions="CenterAndExpand"
+                TextColor="White"
+                FontSize="12" />
+
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="2"
+                FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                x:Name="pareggi"
+                HorizontalTextAlignment="center"
+                    HorizontalOptions="CenterAndExpand"
+                TextColor="White"
+                FontSize="12" />
+
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="3"
+                FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                x:Name="perse"
+                HorizontalTextAlignment="center"
+                    HorizontalOptions="CenterAndExpand"
+                TextColor="White"
+                FontSize="12" />
+
+                    <Label
+                        Grid.Row="1"
+                        Grid.Column="4"
+                FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
+                x:Name="gol"
+                HorizontalTextAlignment="center"
+                    HorizontalOptions="CenterAndExpand"
+                TextColor="White"
+                FontSize="12" />
+                </Grid>
+                
+                
+            </StackLayout>
+        </Frame>
+ </ContentPage>
