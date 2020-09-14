@@ -27,7 +27,9 @@ namespace FutsAppXamarin
         {
             if (sender is ListView lv) lv.SelectedItem = null;
             var partita = e.Item as Match;
-            Navigation.PushPopupAsync(new popup_inserisci_partita(partita));
+            Navigation.PushPopupAsync(new popup_inserisci_partita(partita, PartitaDaRegistrare));
         }
+
+        
     }
 }

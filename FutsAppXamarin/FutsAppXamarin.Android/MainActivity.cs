@@ -33,5 +33,20 @@ namespace FutsAppXamarin.Droid
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
 
+        public override void OnBackPressed()
+        {
+           //finire con l else non ha da cambia
+            if (Rg.Plugins.Popup.Popup.SendBackPressed(base.OnBackPressed))
+            {
+                // Do something if there are some pages in the `PopupStack`
+            }
+            else
+            {
+                base.OnBackPressed();
+            }
+        }
+
+        
+
     }    
 }

@@ -2,7 +2,7 @@
 <pages:PopupPage 
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="FutsAppXamarin.Popup.popup_giocatore"
+    x:Class="FutsAppXamarin.Popup.popup_vedi_giocatore"
     xmlns:local="clr-namespace:FutsAppXamarin.Model"
     xmlns:image="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
     xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
@@ -20,7 +20,7 @@
             HasBackgroundAnimation="True"/>
     </pages:PopupPage.Animation>
 
-    <Frame BackgroundColor="#094ba3" CornerRadius="23" Padding="5,5,5,5"  Margin="15,30" >
+    <Frame BackgroundColor="#094ba3" CornerRadius="23" Padding="5,5,5,5"  Margin="15,80" >
         <Frame BackgroundColor="#7fffdd" CornerRadius="20" Padding="1,1,1,1"  >
             <StackLayout 
         Orientation="Vertical">
@@ -143,14 +143,7 @@
                 TextColor="#094ba3"
                 FontSize="12" />
                 </Grid>
-                <Label FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
-                Text="Entra nella sua lista"
-                HorizontalTextAlignment="center"
-                TextColor="#094ba3"
-                FontSize="16"
-                   Margin="0,15,0,5"/>
-                <Switch x:Name="amico" HorizontalOptions="Center"  Toggled="amico_Toggled"
-                   OnColor="#07a4f3" />
+                
             </StackLayout>
         </Frame>
     </Frame>

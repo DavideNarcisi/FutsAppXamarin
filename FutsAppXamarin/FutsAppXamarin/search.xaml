@@ -10,7 +10,7 @@
    
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
-            <Frame BackgroundColor="#094ba3" CornerRadius="13" Margin="20,5,20,5" Padding="4,4,4,4">
+            <Frame BackgroundColor="#094ba3" CornerRadius="13" Margin="40,5,40,5" Padding="4,4,4,4">
                 <Frame BackgroundColor="#f0ffff" CornerRadius="10" Padding="1,1,1,1">
                     <SearchBar
                     x:Name="SearchBar"

@@ -17,9 +17,13 @@ namespace FutsAppXamarin.Popup
     public partial class popup_inserisci_partita : PopupPage
     {
         Match match;
-        public popup_inserisci_partita(Match match)
+        List<Match> PartitaDaRegistrare;
+     
+        public popup_inserisci_partita(Match match,List<Match> PartitaDaRegistrare)
         {
             InitializeComponent();
+           
+            this.PartitaDaRegistrare = PartitaDaRegistrare;
             this.match = match;
             giocatoreA0.Text = match.teams[0].ToString();
             giocatoreA1.Text = match.teams[1].ToString();
@@ -60,10 +64,16 @@ namespace FutsAppXamarin.Popup
             foreach (var t in match.teams)
                 squadra.Add(t.ToString());
             var result = await DataSave.SaveMatch(totcasa, totosp, golc, golo, squadra, match.risultato);
-            if (result==1)
-                Navigation.PopPopupAsync(); 
-            else if(result==0)
-                await DisplayAlert("ERRORE", "La somma dei gol fatti è diversa dai gol totali", "OK"); 
+            if (result == 1)
+            {
+                PartitaDaRegistrare.Remove(match);
+                
+                Match.daRegistrare = PartitaDaRegistrare.ToArray();
+                Navigation.PopPopupAsync();
+                Navigation.PopAsync();
+            }
+            else if (result == 0)
+                await DisplayAlert("ERRORE", "La somma dei gol fatti è diversa dai gol totali", "OK");
             else
                 await DisplayAlert("ERRORE", "Problema nel salvataggio dati", "OK");
 

@@ -7,15 +7,16 @@ namespace FutsAppXamarin.Model
 {
     public interface IUpdateAmici
     {
-        void UpdateFriends(IList<string> amici, string user);
+        void UpdateFriends(IList<string> amici, Giocatore user);
     }
     public class UpdateAmici
     {
         UpdateAmici() { }
         private static IUpdateAmici update = DependencyService.Get<IUpdateAmici>();
 
-        public static void UpdateFriends(IList<string> amici, string user)
+        public static void UpdateFriends(IList<string> amici, Giocatore user)
         {
+            
             update.UpdateFriends(amici, user);
         }
 
