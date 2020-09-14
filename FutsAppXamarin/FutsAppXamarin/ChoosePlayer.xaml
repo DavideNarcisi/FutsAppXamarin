@@ -1,28 +1,30 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FutsAppXamarin.ChoosePlayer">
+             x:Class="FutsAppXamarin.ChoosePlayer"
+             BackgroundImageSource="background_default.xml">
     <ContentPage.Content>
         <AbsoluteLayout>
             <StackLayout Orientation="Vertical">
             <ListView x:Name="Giocatori"
-                  HasUnevenRows="True"
-                  
-                  
-                  >
+                      HasUnevenRows="True"
+                      ItemTapped="Giocatori_ItemTapped">
                     <ListView.ItemTemplate >
                         <DataTemplate>
                             
                             <ViewCell>
                                 
                             <Button Text="{Binding username}"
-                                x:Name="{Binding username}"   
-                                FontSize="24"
-                                TextColor="#094ba3" 
-                                BackgroundColor="#fffc95"
-                                Clicked="Giocatore_Clicked"
-                                FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
-                                />
+                                    x:Name="{Binding username}"   
+                                    FontSize="24"
+                                    TextColor="#07a4f3" 
+                                    BackgroundColor="#fffc95"
+                                    BorderColor="#fdd017"
+                                    Margin="15,5"
+                                    BorderWidth="5"
+                                    CornerRadius="15"
+                                    Clicked="Giocatore_Clicked"
+                                    FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"/>
 
                         </ViewCell>
 
@@ -32,11 +34,14 @@
 
             </ListView>
         </StackLayout>
-        <ImageButton Source="editFAB.png" 
-            BackgroundColor="Transparent"
-            AbsoluteLayout.LayoutFlags="PositionProportional"  
-            AbsoluteLayout.LayoutBounds=".95,.95,80,80" 
-            Clicked="Handle_Clicked" />
+        <ImageButton Source="ic_add_black_30dp.xml" 
+                     BackgroundColor="#07a4f3"
+                     BorderColor="#094ba3"
+                     BorderWidth="5"
+                     CornerRadius="1000"
+                     AbsoluteLayout.LayoutFlags="PositionProportional"  
+                     AbsoluteLayout.LayoutBounds=".95,.95,80,80" 
+                     Clicked="Handle_Clicked" />
         </AbsoluteLayout>
 
     </ContentPage.Content>
