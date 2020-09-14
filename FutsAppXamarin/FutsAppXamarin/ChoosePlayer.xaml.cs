@@ -61,11 +61,13 @@ namespace FutsAppXamarin
                 {
                     squad.Add(s);                    
                     v.BackgroundColor = Color.FromHex("#fdd017");
+                    v.BorderColor = Color.White;
                 }
                 else
                 {
                     squad.Remove(s);
                     v.BackgroundColor = Color.FromHex("#fffc95");
+                    v.BorderColor = Color.FromHex("#fdd017");
                 }
             }
         }
@@ -89,6 +91,9 @@ namespace FutsAppXamarin
 
         }
 
-       
+        private void Giocatori_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            if (sender is ListView lv) lv.SelectedItem = null;
+        }
     }
 }

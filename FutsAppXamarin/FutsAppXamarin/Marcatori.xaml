@@ -1,57 +1,72 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FutsAppXamarin.Marcatori"
-             Title="Marcatori">
+             x:Class="FutsAppXamarin.Marcatori" 
+             BackgroundImageSource="background_default.xml"
+             Title="MARCATORI">
+    
+    
     <ContentPage.Content>
-        <StackLayout Orientation="Vertical">
+        
+        
+
             <ListView x:Name="ClassificaListView"
-                  HasUnevenRows="True">
+                  HasUnevenRows="True"
+                      ItemTapped="ClassificaListView_ItemTapped"
+                     >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-
-                            <Frame BackgroundColor="LawnGreen" CornerRadius="23" HeightRequest="70" Margin="15,5,15,5" Padding="5,5,5,5"  >
+                                    
+                            <Frame BackgroundColor="#00ff00"  CornerRadius="23" HeightRequest="70" Margin="15,10" Padding="5,5,5,5"  >
                                 <Frame BackgroundColor="White" CornerRadius="20" Padding="1,1,1,1"  >
 
-                                    <StackLayout Orientation="Horizontal">
+                                    <Grid HorizontalOptions="Fill" >
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="35"/>
+                                            <ColumnDefinition Width="4*"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
 
-                                        <Label Text="{Binding username}"
+                                            <Label x:Name="position" Text="{Binding positionm}" FontSize="25" Grid.Column="0" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular" 
+                                               HorizontalOptions="Center" TextColor="Silver" VerticalOptions="Center"/>
+                                                <Image Source="{Binding medalm}" Aspect="AspectFill" Grid.Column="0" />
+                                                <Label Text="{Binding username}"
                                                FontSize="20" 
                                                VerticalOptions="Center"
-                                               HorizontalOptions="CenterAndExpand"
+                                               HorizontalOptions="Center"
+                                               Grid.Column="1"
                                                FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
                                                FontAttributes="Bold"
-                                               TextColor="Green"
-                                    />
+                                               TextColor="#008000"/>
                                         <Label Text="{Binding Goal}"
                                                FontSize="20" 
                                                VerticalOptions="Center"
-                                               HorizontalOptions="CenterAndExpand"
+                                               HorizontalOptions="Center"
+                                               Grid.Column="2"
                                                FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
                                                FontAttributes="Bold"
-                                               TextColor="Green"
-                                    />
+                                               TextColor="#008000"/>
+                                                
 
 
-
-                                    </StackLayout>
+                                            </Grid>
 
 
 
                                 </Frame>
                             </Frame>
-
-                        </ViewCell>
+                                     
+                                </ViewCell>
 
                     </DataTemplate>
 
                 </ListView.ItemTemplate>
 
             </ListView>
-
-        </StackLayout>
-
+                    
+               
+       
     </ContentPage.Content>
 
 </ContentPage>

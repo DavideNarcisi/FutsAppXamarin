@@ -4,13 +4,20 @@
             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
             x:Class="FutsAppXamarin.PaginaClassifiche"
             xmlns:pages="clr-namespace:FutsAppXamarin"
-             BarBackgroundColor="#fffc95"            
+            
+            BarBackgroundColor="#fffc95"            
             SelectedTabColor="#07a4f3"
-            UnselectedTabColor="#353e47"  >
+            UnselectedTabColor="#353e47"            
+            x:Name="tabbed_page"
+            >
+    <NavigationPage.TitleView>
+        <Label Text="FUTSAPP" Padding="5,0,0,0" FontFamily="titoli.ttf#titoli" TextColor="#fffc95" FontSize="24" VerticalTextAlignment="Center"/>      
+    </NavigationPage.TitleView>
+    
 
-  
-    <pages:Classifiche/>
-    <pages:Marcatori />
+
+    <pages:Classifiche />
+    <pages:Marcatori/>
     
 
 

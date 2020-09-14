@@ -39,15 +39,17 @@ namespace FutsAppXamarin
 
             try
             {
-                if (Match.daFare.Length != 0 && Match.daFare.Length != 1)
+                if (Match.daRegistrare.Length != 0 && Match.daRegistrare.Length != 1)
                 {
                     inserisci.Text = Match.daFare.Length + " risultati da inserire";
                     inserisci.BackgroundColor = Color.FromHex("#f12213");
+                    inserisci.TextColor = Color.White;
                 }
-                else if (Match.daFare.Length == 1)
+                else if (Match.daRegistrare.Length == 1)
                 {
                     inserisci.Text = Match.daFare.Length + " risultato da inserire";
                     inserisci.BackgroundColor = Color.FromHex("#f12213");
+                    inserisci.TextColor = Color.White;
                 }
             }
             catch (Exception err)
