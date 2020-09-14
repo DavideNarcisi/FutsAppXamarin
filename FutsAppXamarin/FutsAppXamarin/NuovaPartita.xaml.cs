@@ -15,9 +15,10 @@ namespace FutsAppXamarin
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NuovaPartita : ContentPage
     {
-        static string ora;
+        static TimeSpan time;
         static string place;
-        static string data;
+        static DateTime data;
+        string ora;
         int y=0, m, g;
         public static string[] teamA;
         public static string[] teamB;
@@ -28,8 +29,8 @@ namespace FutsAppXamarin
         public NuovaPartita()
         {
             InitializeComponent();
-            ora = "";
-            data = "";
+            time = TimeSpan.Zero;
+            data = DateTime.Now;
             place = "";
             listaA = new List<Giocatore> { Giocatore.user,
             new Giocatore("aggiungi"),
@@ -71,6 +72,13 @@ namespace FutsAppXamarin
 
             SquadraA.ItemsSource = listaA;
             SquadraB.ItemsSource = listaB;
+            if(place!="")
+            luogo.Text = place;
+            if (data != DateTime.Now)
+                dataPick.Date = data;
+            if(time!= TimeSpan.Zero)
+                oraPick.Time=time;
+
         }
 
 
@@ -89,12 +97,12 @@ namespace FutsAppXamarin
 
         private void oraPick_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            ora = oraPick.Time.ToString();
+            time = oraPick.Time;
         }
 
         private void dataPick_PropertyChanged(object sender, PropertyChangedEventArgs e)
         {
-            data = dataPick.Date.ToString();
+            data = dataPick.Date;
         }
 
         private async void Button_Clicked(object sender, EventArgs e)

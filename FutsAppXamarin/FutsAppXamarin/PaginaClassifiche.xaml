@@ -1,12 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FutsAppXamarin.PaginaClassifiche">
-    <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"             
+            x:Class="FutsAppXamarin.PaginaClassifiche"
+            xmlns:pages="clr-namespace:FutsAppXamarin"
+            
+            BarBackgroundColor="#fffc95"            
+            SelectedTabColor="#07a4f3"
+            UnselectedTabColor="#353e47"            
+            x:Name="tabbed_page"
+            >
+    <NavigationPage.TitleView>
+        <Label Text="FUTSAPP" Padding="5,0,0,0" FontFamily="titoli.ttf#titoli" TextColor="#fffc95" FontSize="24" VerticalTextAlignment="Center"/>      
+    </NavigationPage.TitleView>
+    
+
+
+    <pages:Classifiche />
+    <pages:Marcatori/>
+    
+
+
+</TabbedPage>
