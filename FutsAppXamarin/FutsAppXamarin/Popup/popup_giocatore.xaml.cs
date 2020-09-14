@@ -10,18 +10,19 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 using ImageCircle.Forms.Plugin;
+using Xamarin.Forms.Internals;
 
 namespace FutsAppXamarin.Popup
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class popup_giocatore : Rg.Plugins.Popup.Pages.PopupPage
     {
-        string gioc;
+        Giocatore giocatore;
         IList<string> listamici = new List<string>();
         
         public popup_giocatore(Giocatore giocatore)
         {
-            gioc = giocatore.username;
+            this.giocatore = giocatore;
             InitializeComponent();
             username.Text = giocatore.username;
             giocate.Text = giocatore.dati["partite giocate"].ToString();
@@ -62,18 +63,38 @@ namespace FutsAppXamarin.Popup
 
         private void amico_Toggled(object sender, ToggledEventArgs e)
         {
-            if(amico.IsToggled)
+            if (amico.IsToggled)
+            {                
                 amico.ThumbColor = Color.FromHex("#094ba3");
+            }
             else
+            {                
                 amico.ThumbColor = Color.White;
+            }
         }
 
         private void Close(object sender, EventArgs e)
         {
 
             if ((amico.IsToggled && !listamici.Contains(Giocatore.user.username)) || (!amico.IsToggled && listamici.Contains(Giocatore.user.username)))
-                UpdateAmici.UpdateFriends(listamici, gioc);
+                UpdateAmici.UpdateFriends(listamici, giocatore);
             Navigation.PopPopupAsync();
+        }
+        protected override bool OnBackButtonPressed()
+        {
+            if ((amico.IsToggled && !listamici.Contains(Giocatore.user.username)) || (!amico.IsToggled && listamici.Contains(Giocatore.user.username)))
+                UpdateAmici.UpdateFriends(listamici, giocatore);
+            Navigation.PopPopupAsync();
+            return true;
+        }
+
+        // Invoked when background is clicked
+        protected override bool OnBackgroundClicked()
+        {
+            if ((amico.IsToggled && !listamici.Contains(Giocatore.user.username)) || (!amico.IsToggled && listamici.Contains(Giocatore.user.username)))
+                UpdateAmici.UpdateFriends(listamici, giocatore);
+            Navigation.PopPopupAsync();
+            return false;
         }
     }
 }
