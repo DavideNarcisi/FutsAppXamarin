@@ -20,7 +20,7 @@
             HasBackgroundAnimation="True"/>
     </pages:PopupPage.Animation>
 
-    <Frame BackgroundColor="#094ba3" CornerRadius="23" Padding="5,5,5,5"  Margin="15,30">
+    <Frame BackgroundColor="#094ba3" CornerRadius="23" Padding="5,5,5,5"  Margin="15,30" >
         <Frame BackgroundColor="#7fffdd" CornerRadius="20" Padding="1,1,1,1"  >
             <StackLayout 
         Orientation="Vertical">

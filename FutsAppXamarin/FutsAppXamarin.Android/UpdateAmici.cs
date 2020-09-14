@@ -28,7 +28,10 @@ namespace FutsAppXamarin.Droid
 
         public async void UpdateFriends(IList<string> amici, string user)
         {
+            Console.WriteLine("bellllaaaaaaa");
             Java.Util.ArrayList nuovo = new Java.Util.ArrayList();
+
+            Console.WriteLine("oooooooooooo");
             foreach (var a in amici)
                 nuovo.Add(a);
             await FirebaseFirestore.Instance.Collection("utenti").Document(user).Update("amici", nuovo);

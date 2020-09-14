@@ -16,12 +16,12 @@ namespace FutsAppXamarin.Popup
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class popup_giocatore : Rg.Plugins.Popup.Pages.PopupPage
     {
-        Giocatore giocatore;
+        string gioc;
         IList<string> listamici = new List<string>();
         
         public popup_giocatore(Giocatore giocatore)
         {
-            this.giocatore = giocatore;
+            gioc = giocatore.username;
             InitializeComponent();
             username.Text = giocatore.username;
             giocate.Text = giocatore.dati["partite giocate"].ToString();
@@ -31,12 +31,13 @@ namespace FutsAppXamarin.Popup
             perse.Text = giocatore.dati["sconfitte"].ToString();
             
             var amici = (System.Collections.IList) giocatore.dati["amici"];
+            
             foreach (Giocatore g in Giocatore.players)
             {
                 if (amici.Contains(g.username))
                     listamici.Add(g.username);
             }
-            if (amici.Contains(giocatore.username))
+            if (listamici.Contains(Giocatore.user.username))
             {
                 amico.IsToggled = true;
                 amico.ThumbColor = Color.FromHex("#094ba3");
@@ -71,7 +72,7 @@ namespace FutsAppXamarin.Popup
         {
 
             if ((amico.IsToggled && !listamici.Contains(Giocatore.user.username)) || (!amico.IsToggled && listamici.Contains(Giocatore.user.username)))
-                UpdateAmici.UpdateFriends(listamici, giocatore.username);
+                UpdateAmici.UpdateFriends(listamici, gioc);
             Navigation.PopPopupAsync();
         }
     }
