@@ -58,6 +58,7 @@
                         Margin="20,5"/>
             <Button Text="LOG OUT"  
                         x:Name="logout"
+                    Clicked="Menu_Click"
                         FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
                         TextColor="Yellow"
                         FontSize="18"
