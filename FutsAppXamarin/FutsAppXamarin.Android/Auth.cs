@@ -55,6 +55,7 @@ namespace FutsAppXamarin.Droid
             try
             {
                 Firebase.Auth.FirebaseAuth.Instance.SignOut();
+
                 return true;
             }
             catch (Exception ex)

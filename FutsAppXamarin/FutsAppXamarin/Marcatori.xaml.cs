@@ -19,7 +19,7 @@ namespace FutsAppXamarin
         public Marcatori()
         {
             InitializeComponent();
-            marcatori = new List<Giocatore>(Giocatore.players); //cambiare con amici            
+            marcatori = new List<Giocatore>(Giocatore.amici); //cambiare con amici            
             Ordina();
 
             marcatori[0].medalm = "gold.jpg";

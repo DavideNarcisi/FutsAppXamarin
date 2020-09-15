@@ -86,7 +86,7 @@ namespace FutsAppXamarin
 
         private async void Giocatori_Clicked_A(object sender, ItemTappedEventArgs e)
         {
-            
+            if (sender is ListView lv) lv.SelectedItem = null;
             await Navigation.PushAsync(new ChoosePlayer(Giocatore.user));
         }
 
@@ -133,7 +133,7 @@ namespace FutsAppXamarin
                     }
                 }
 
-                ora = oraPick.Time.ToString();
+                ora = oraPick.Time.Hours+":"+oraPick.Time.Minutes;
                 y = dataPick.Date.Year;
                 m = dataPick.Date.Month;
                 g = dataPick.Date.Day;
@@ -149,7 +149,7 @@ namespace FutsAppXamarin
 
         private async void Giocatori_Clicked_B(object sender, ItemTappedEventArgs e)
         {
-
+            if (sender is ListView lv) lv.SelectedItem = null;
             await Navigation.PushAsync(new ChoosePlayer());
         }
 

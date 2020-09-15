@@ -18,7 +18,7 @@ namespace FutsAppXamarin
         public Classifiche()
         {
             InitializeComponent();
-            classifica = new List<Giocatore>(Giocatore.players);
+            classifica = new List<Giocatore>(Giocatore.amici);
             Ordina();
             classifica[0].medal = "gold.jpg";
             classifica[1].medal = "silver.jpg";

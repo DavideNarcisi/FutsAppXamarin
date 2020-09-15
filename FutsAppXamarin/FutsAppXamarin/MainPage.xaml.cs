@@ -31,7 +31,7 @@ namespace FutsAppXamarin
         {
             foreach (Match m in Match.daFare)
             {
-                ImageSource img = await new ImageHelper().LoadImage("milito"); //m.teams[0].ToString()
+                ImageSource img = await new ImageHelper().LoadImage(m.teams[0].ToString()); //m.teams[0].ToString()
                 if (!img.Equals(null))
                     m.profile_image = img;
             }

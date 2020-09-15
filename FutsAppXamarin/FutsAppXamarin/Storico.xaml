@@ -2,8 +2,11 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="FutsAppXamarin.Storico"
-             Title="storico"
+             
              BackgroundImageSource="background_default.xml">
+    <NavigationPage.TitleView>
+        <Label Text="FUTSAPP" Padding="5,0,0,0" FontFamily="titoli.ttf#titoli" TextColor="#fffc95" FontSize="24" VerticalTextAlignment="Center"/>
+    </NavigationPage.TitleView>
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
 

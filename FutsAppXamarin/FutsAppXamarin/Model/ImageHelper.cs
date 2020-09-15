@@ -17,12 +17,20 @@ namespace FutsAppXamarin.Model
 
         public async Task<string> SaveImage(Stream fileStream, string fileName)
         {
-            var imageUrl = await firebaseStorage
+            try
+            {
+                var imageUrl = await firebaseStorage
                 .Child("images")
                 .Child(fileName)
                 .PutAsync(fileStream);
-            
-            return imageUrl;
+
+                return imageUrl;
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine(e.StackTrace);
+                return "";
+            }
         }
 
         public async Task<ImageSource> LoadImage(string fileName)
@@ -45,7 +53,7 @@ namespace FutsAppXamarin.Model
             catch (Exception e)
             {
                 Console.WriteLine(e.StackTrace);
-                return null;
+                return "user.png";
             }
         }
     }

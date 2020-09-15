@@ -21,14 +21,14 @@ namespace FutsAppXamarin
         {
             InitializeComponent();
             sq = 2;
-            Giocatori.ItemsSource = Inserisci(Giocatore.players);
+            Giocatori.ItemsSource = Inserisci(Giocatore.amici);
             
         }
         public ChoosePlayer(Giocatore user)
         {
             InitializeComponent();
             sq = 1;
-            Giocatori.ItemsSource = Inserisci(Giocatore.players); //da cambiare
+            Giocatori.ItemsSource = Inserisci(Giocatore.amici); //da cambiare
             squadra.Add(user);
             squad.Add(user.username);
             
@@ -37,13 +37,13 @@ namespace FutsAppXamarin
 
         private Giocatore[] Inserisci(Giocatore[] amici)
         {
-            Giocatore[] nuovo = new Giocatore[Giocatore.players.Length - 1];
+            Giocatore[] nuovo = new Giocatore[Giocatore.amici.Length - 1];
             int j=0;
             
-            for(int i=0; i<Giocatore.players.Length;i++)
+            for(int i=0; i<Giocatore.amici.Length;i++)
             {
-                if (!Giocatore.players[i].Equals(Giocatore.user))
-                    nuovo[i - j] = Giocatore.players[i];
+                if (!Giocatore.amici[i].Equals(Giocatore.user))
+                    nuovo[i - j] = Giocatore.amici[i];
                 else j = 1;
             }
             return nuovo;

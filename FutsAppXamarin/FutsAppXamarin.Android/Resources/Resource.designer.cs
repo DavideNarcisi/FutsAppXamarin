@@ -25,6 +25,188 @@ namespace FutsAppXamarin.Droid
 		
 		public static void UpdateIdValues()
 		{
+			global::Plugin.Media.Resource.Attribute.alpha = global::FutsAppXamarin.Droid.Resource.Attribute.alpha;
+			global::Plugin.Media.Resource.Attribute.coordinatorLayoutStyle = global::FutsAppXamarin.Droid.Resource.Attribute.coordinatorLayoutStyle;
+			global::Plugin.Media.Resource.Attribute.font = global::FutsAppXamarin.Droid.Resource.Attribute.font;
+			global::Plugin.Media.Resource.Attribute.fontProviderAuthority = global::FutsAppXamarin.Droid.Resource.Attribute.fontProviderAuthority;
+			global::Plugin.Media.Resource.Attribute.fontProviderCerts = global::FutsAppXamarin.Droid.Resource.Attribute.fontProviderCerts;
+			global::Plugin.Media.Resource.Attribute.fontProviderFetchStrategy = global::FutsAppXamarin.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::Plugin.Media.Resource.Attribute.fontProviderFetchTimeout = global::FutsAppXamarin.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::Plugin.Media.Resource.Attribute.fontProviderPackage = global::FutsAppXamarin.Droid.Resource.Attribute.fontProviderPackage;
+			global::Plugin.Media.Resource.Attribute.fontProviderQuery = global::FutsAppXamarin.Droid.Resource.Attribute.fontProviderQuery;
+			global::Plugin.Media.Resource.Attribute.fontStyle = global::FutsAppXamarin.Droid.Resource.Attribute.fontStyle;
+			global::Plugin.Media.Resource.Attribute.fontVariationSettings = global::FutsAppXamarin.Droid.Resource.Attribute.fontVariationSettings;
+			global::Plugin.Media.Resource.Attribute.fontWeight = global::FutsAppXamarin.Droid.Resource.Attribute.fontWeight;
+			global::Plugin.Media.Resource.Attribute.keylines = global::FutsAppXamarin.Droid.Resource.Attribute.keylines;
+			global::Plugin.Media.Resource.Attribute.layout_anchor = global::FutsAppXamarin.Droid.Resource.Attribute.layout_anchor;
+			global::Plugin.Media.Resource.Attribute.layout_anchorGravity = global::FutsAppXamarin.Droid.Resource.Attribute.layout_anchorGravity;
+			global::Plugin.Media.Resource.Attribute.layout_behavior = global::FutsAppXamarin.Droid.Resource.Attribute.layout_behavior;
+			global::Plugin.Media.Resource.Attribute.layout_dodgeInsetEdges = global::FutsAppXamarin.Droid.Resource.Attribute.layout_dodgeInsetEdges;
+			global::Plugin.Media.Resource.Attribute.layout_insetEdge = global::FutsAppXamarin.Droid.Resource.Attribute.layout_insetEdge;
+			global::Plugin.Media.Resource.Attribute.layout_keyline = global::FutsAppXamarin.Droid.Resource.Attribute.layout_keyline;
+			global::Plugin.Media.Resource.Attribute.statusBarBackground = global::FutsAppXamarin.Droid.Resource.Attribute.statusBarBackground;
+			global::Plugin.Media.Resource.Attribute.ttcIndex = global::FutsAppXamarin.Droid.Resource.Attribute.ttcIndex;
+			global::Plugin.Media.Resource.Color.browser_actions_bg_grey = global::FutsAppXamarin.Droid.Resource.Color.browser_actions_bg_grey;
+			global::Plugin.Media.Resource.Color.browser_actions_divider_color = global::FutsAppXamarin.Droid.Resource.Color.browser_actions_divider_color;
+			global::Plugin.Media.Resource.Color.browser_actions_text_color = global::FutsAppXamarin.Droid.Resource.Color.browser_actions_text_color;
+			global::Plugin.Media.Resource.Color.browser_actions_title_color = global::FutsAppXamarin.Droid.Resource.Color.browser_actions_title_color;
+			global::Plugin.Media.Resource.Color.notification_action_color_filter = global::FutsAppXamarin.Droid.Resource.Color.notification_action_color_filter;
+			global::Plugin.Media.Resource.Color.notification_icon_bg_color = global::FutsAppXamarin.Droid.Resource.Color.notification_icon_bg_color;
+			global::Plugin.Media.Resource.Color.ripple_material_light = global::FutsAppXamarin.Droid.Resource.Color.ripple_material_light;
+			global::Plugin.Media.Resource.Color.secondary_text_default_material_light = global::FutsAppXamarin.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Plugin.Media.Resource.Dimension.browser_actions_context_menu_max_width = global::FutsAppXamarin.Droid.Resource.Dimension.browser_actions_context_menu_max_width;
+			global::Plugin.Media.Resource.Dimension.browser_actions_context_menu_min_padding = global::FutsAppXamarin.Droid.Resource.Dimension.browser_actions_context_menu_min_padding;
+			global::Plugin.Media.Resource.Dimension.compat_button_inset_horizontal_material = global::FutsAppXamarin.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Plugin.Media.Resource.Dimension.compat_button_inset_vertical_material = global::FutsAppXamarin.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Plugin.Media.Resource.Dimension.compat_button_padding_horizontal_material = global::FutsAppXamarin.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Plugin.Media.Resource.Dimension.compat_button_padding_vertical_material = global::FutsAppXamarin.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Plugin.Media.Resource.Dimension.compat_control_corner_material = global::FutsAppXamarin.Droid.Resource.Dimension.compat_control_corner_material;
+			global::Plugin.Media.Resource.Dimension.compat_notification_large_icon_max_height = global::FutsAppXamarin.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::Plugin.Media.Resource.Dimension.compat_notification_large_icon_max_width = global::FutsAppXamarin.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::Plugin.Media.Resource.Dimension.notification_action_icon_size = global::FutsAppXamarin.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Plugin.Media.Resource.Dimension.notification_action_text_size = global::FutsAppXamarin.Droid.Resource.Dimension.notification_action_text_size;
+			global::Plugin.Media.Resource.Dimension.notification_big_circle_margin = global::FutsAppXamarin.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Plugin.Media.Resource.Dimension.notification_content_margin_start = global::FutsAppXamarin.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Plugin.Media.Resource.Dimension.notification_large_icon_height = global::FutsAppXamarin.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Plugin.Media.Resource.Dimension.notification_large_icon_width = global::FutsAppXamarin.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Plugin.Media.Resource.Dimension.notification_main_column_padding_top = global::FutsAppXamarin.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Plugin.Media.Resource.Dimension.notification_media_narrow_margin = global::FutsAppXamarin.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Plugin.Media.Resource.Dimension.notification_right_icon_size = global::FutsAppXamarin.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Plugin.Media.Resource.Dimension.notification_right_side_padding_top = global::FutsAppXamarin.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Plugin.Media.Resource.Dimension.notification_small_icon_background_padding = global::FutsAppXamarin.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Plugin.Media.Resource.Dimension.notification_small_icon_size_as_large = global::FutsAppXamarin.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Plugin.Media.Resource.Dimension.notification_subtext_size = global::FutsAppXamarin.Droid.Resource.Dimension.notification_subtext_size;
+			global::Plugin.Media.Resource.Dimension.notification_top_pad = global::FutsAppXamarin.Droid.Resource.Dimension.notification_top_pad;
+			global::Plugin.Media.Resource.Dimension.notification_top_pad_large_text = global::FutsAppXamarin.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Plugin.Media.Resource.Drawable.notification_action_background = global::FutsAppXamarin.Droid.Resource.Drawable.notification_action_background;
+			global::Plugin.Media.Resource.Drawable.notification_bg = global::FutsAppXamarin.Droid.Resource.Drawable.notification_bg;
+			global::Plugin.Media.Resource.Drawable.notification_bg_low = global::FutsAppXamarin.Droid.Resource.Drawable.notification_bg_low;
+			global::Plugin.Media.Resource.Drawable.notification_bg_low_normal = global::FutsAppXamarin.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Plugin.Media.Resource.Drawable.notification_bg_low_pressed = global::FutsAppXamarin.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Plugin.Media.Resource.Drawable.notification_bg_normal = global::FutsAppXamarin.Droid.Resource.Drawable.notification_bg_normal;
+			global::Plugin.Media.Resource.Drawable.notification_bg_normal_pressed = global::FutsAppXamarin.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Plugin.Media.Resource.Drawable.notification_icon_background = global::FutsAppXamarin.Droid.Resource.Drawable.notification_icon_background;
+			global::Plugin.Media.Resource.Drawable.notification_template_icon_bg = global::FutsAppXamarin.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Plugin.Media.Resource.Drawable.notification_template_icon_low_bg = global::FutsAppXamarin.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Plugin.Media.Resource.Drawable.notification_tile_bg = global::FutsAppXamarin.Droid.Resource.Drawable.notification_tile_bg;
+			global::Plugin.Media.Resource.Drawable.notify_panel_notification_icon_bg = global::FutsAppXamarin.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Plugin.Media.Resource.Id.actions = global::FutsAppXamarin.Droid.Resource.Id.actions;
+			global::Plugin.Media.Resource.Id.action_container = global::FutsAppXamarin.Droid.Resource.Id.action_container;
+			global::Plugin.Media.Resource.Id.action_divider = global::FutsAppXamarin.Droid.Resource.Id.action_divider;
+			global::Plugin.Media.Resource.Id.action_image = global::FutsAppXamarin.Droid.Resource.Id.action_image;
+			global::Plugin.Media.Resource.Id.action_text = global::FutsAppXamarin.Droid.Resource.Id.action_text;
+			global::Plugin.Media.Resource.Id.all = global::FutsAppXamarin.Droid.Resource.Id.all;
+			global::Plugin.Media.Resource.Id.async = global::FutsAppXamarin.Droid.Resource.Id.async;
+			global::Plugin.Media.Resource.Id.blocking = global::FutsAppXamarin.Droid.Resource.Id.blocking;
+			global::Plugin.Media.Resource.Id.bottom = global::FutsAppXamarin.Droid.Resource.Id.bottom;
+			global::Plugin.Media.Resource.Id.browser_actions_header_text = global::FutsAppXamarin.Droid.Resource.Id.browser_actions_header_text;
+			global::Plugin.Media.Resource.Id.browser_actions_menu_items = global::FutsAppXamarin.Droid.Resource.Id.browser_actions_menu_items;
+			global::Plugin.Media.Resource.Id.browser_actions_menu_item_icon = global::FutsAppXamarin.Droid.Resource.Id.browser_actions_menu_item_icon;
+			global::Plugin.Media.Resource.Id.browser_actions_menu_item_text = global::FutsAppXamarin.Droid.Resource.Id.browser_actions_menu_item_text;
+			global::Plugin.Media.Resource.Id.browser_actions_menu_view = global::FutsAppXamarin.Droid.Resource.Id.browser_actions_menu_view;
+			global::Plugin.Media.Resource.Id.center = global::FutsAppXamarin.Droid.Resource.Id.center;
+			global::Plugin.Media.Resource.Id.center_horizontal = global::FutsAppXamarin.Droid.Resource.Id.center_horizontal;
+			global::Plugin.Media.Resource.Id.center_vertical = global::FutsAppXamarin.Droid.Resource.Id.center_vertical;
+			global::Plugin.Media.Resource.Id.chronometer = global::FutsAppXamarin.Droid.Resource.Id.chronometer;
+			global::Plugin.Media.Resource.Id.clip_horizontal = global::FutsAppXamarin.Droid.Resource.Id.clip_horizontal;
+			global::Plugin.Media.Resource.Id.clip_vertical = global::FutsAppXamarin.Droid.Resource.Id.clip_vertical;
+			global::Plugin.Media.Resource.Id.end = global::FutsAppXamarin.Droid.Resource.Id.end;
+			global::Plugin.Media.Resource.Id.fill = global::FutsAppXamarin.Droid.Resource.Id.fill;
+			global::Plugin.Media.Resource.Id.fill_horizontal = global::FutsAppXamarin.Droid.Resource.Id.fill_horizontal;
+			global::Plugin.Media.Resource.Id.fill_vertical = global::FutsAppXamarin.Droid.Resource.Id.fill_vertical;
+			global::Plugin.Media.Resource.Id.forever = global::FutsAppXamarin.Droid.Resource.Id.forever;
+			global::Plugin.Media.Resource.Id.icon = global::FutsAppXamarin.Droid.Resource.Id.icon;
+			global::Plugin.Media.Resource.Id.icon_group = global::FutsAppXamarin.Droid.Resource.Id.icon_group;
+			global::Plugin.Media.Resource.Id.info = global::FutsAppXamarin.Droid.Resource.Id.info;
+			global::Plugin.Media.Resource.Id.italic = global::FutsAppXamarin.Droid.Resource.Id.italic;
+			global::Plugin.Media.Resource.Id.left = global::FutsAppXamarin.Droid.Resource.Id.left;
+			global::Plugin.Media.Resource.Id.line1 = global::FutsAppXamarin.Droid.Resource.Id.line1;
+			global::Plugin.Media.Resource.Id.line3 = global::FutsAppXamarin.Droid.Resource.Id.line3;
+			global::Plugin.Media.Resource.Id.none = global::FutsAppXamarin.Droid.Resource.Id.none;
+			global::Plugin.Media.Resource.Id.normal = global::FutsAppXamarin.Droid.Resource.Id.normal;
+			global::Plugin.Media.Resource.Id.notification_background = global::FutsAppXamarin.Droid.Resource.Id.notification_background;
+			global::Plugin.Media.Resource.Id.notification_main_column = global::FutsAppXamarin.Droid.Resource.Id.notification_main_column;
+			global::Plugin.Media.Resource.Id.notification_main_column_container = global::FutsAppXamarin.Droid.Resource.Id.notification_main_column_container;
+			global::Plugin.Media.Resource.Id.right = global::FutsAppXamarin.Droid.Resource.Id.right;
+			global::Plugin.Media.Resource.Id.right_icon = global::FutsAppXamarin.Droid.Resource.Id.right_icon;
+			global::Plugin.Media.Resource.Id.right_side = global::FutsAppXamarin.Droid.Resource.Id.right_side;
+			global::Plugin.Media.Resource.Id.start = global::FutsAppXamarin.Droid.Resource.Id.start;
+			global::Plugin.Media.Resource.Id.tag_transition_group = global::FutsAppXamarin.Droid.Resource.Id.tag_transition_group;
+			global::Plugin.Media.Resource.Id.tag_unhandled_key_event_manager = global::FutsAppXamarin.Droid.Resource.Id.tag_unhandled_key_event_manager;
+			global::Plugin.Media.Resource.Id.tag_unhandled_key_listeners = global::FutsAppXamarin.Droid.Resource.Id.tag_unhandled_key_listeners;
+			global::Plugin.Media.Resource.Id.text = global::FutsAppXamarin.Droid.Resource.Id.text;
+			global::Plugin.Media.Resource.Id.text2 = global::FutsAppXamarin.Droid.Resource.Id.text2;
+			global::Plugin.Media.Resource.Id.time = global::FutsAppXamarin.Droid.Resource.Id.time;
+			global::Plugin.Media.Resource.Id.title = global::FutsAppXamarin.Droid.Resource.Id.title;
+			global::Plugin.Media.Resource.Id.top = global::FutsAppXamarin.Droid.Resource.Id.top;
+			global::Plugin.Media.Resource.Integer.status_bar_notification_info_maxnum = global::FutsAppXamarin.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Plugin.Media.Resource.Layout.browser_actions_context_menu_page = global::FutsAppXamarin.Droid.Resource.Layout.browser_actions_context_menu_page;
+			global::Plugin.Media.Resource.Layout.browser_actions_context_menu_row = global::FutsAppXamarin.Droid.Resource.Layout.browser_actions_context_menu_row;
+			global::Plugin.Media.Resource.Layout.notification_action = global::FutsAppXamarin.Droid.Resource.Layout.notification_action;
+			global::Plugin.Media.Resource.Layout.notification_action_tombstone = global::FutsAppXamarin.Droid.Resource.Layout.notification_action_tombstone;
+			global::Plugin.Media.Resource.Layout.notification_template_custom_big = global::FutsAppXamarin.Droid.Resource.Layout.notification_template_custom_big;
+			global::Plugin.Media.Resource.Layout.notification_template_icon_group = global::FutsAppXamarin.Droid.Resource.Layout.notification_template_icon_group;
+			global::Plugin.Media.Resource.Layout.notification_template_part_chronometer = global::FutsAppXamarin.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Plugin.Media.Resource.Layout.notification_template_part_time = global::FutsAppXamarin.Droid.Resource.Layout.notification_template_part_time;
+			global::Plugin.Media.Resource.String.status_bar_notification_info_overflow = global::FutsAppXamarin.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Plugin.Media.Resource.Style.TextAppearance_Compat_Notification = global::FutsAppXamarin.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::Plugin.Media.Resource.Style.TextAppearance_Compat_Notification_Info = global::FutsAppXamarin.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Plugin.Media.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::FutsAppXamarin.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Plugin.Media.Resource.Style.TextAppearance_Compat_Notification_Time = global::FutsAppXamarin.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Plugin.Media.Resource.Style.TextAppearance_Compat_Notification_Title = global::FutsAppXamarin.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Plugin.Media.Resource.Style.Widget_Compat_NotificationActionContainer = global::FutsAppXamarin.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Plugin.Media.Resource.Style.Widget_Compat_NotificationActionText = global::FutsAppXamarin.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Plugin.Media.Resource.Style.Widget_Support_CoordinatorLayout = global::FutsAppXamarin.Droid.Resource.Style.Widget_Support_CoordinatorLayout;
+			global::Plugin.Media.Resource.Styleable.ColorStateListItem = global::FutsAppXamarin.Droid.Resource.Styleable.ColorStateListItem;
+			global::Plugin.Media.Resource.Styleable.ColorStateListItem_alpha = global::FutsAppXamarin.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::Plugin.Media.Resource.Styleable.ColorStateListItem_android_alpha = global::FutsAppXamarin.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::Plugin.Media.Resource.Styleable.ColorStateListItem_android_color = global::FutsAppXamarin.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::Plugin.Media.Resource.Styleable.CoordinatorLayout = global::FutsAppXamarin.Droid.Resource.Styleable.CoordinatorLayout;
+			global::Plugin.Media.Resource.Styleable.CoordinatorLayout_keylines = global::FutsAppXamarin.Droid.Resource.Styleable.CoordinatorLayout_keylines;
+			global::Plugin.Media.Resource.Styleable.CoordinatorLayout_Layout = global::FutsAppXamarin.Droid.Resource.Styleable.CoordinatorLayout_Layout;
+			global::Plugin.Media.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity = global::FutsAppXamarin.Droid.Resource.Styleable.CoordinatorLayout_Layout_android_layout_gravity;
+			global::Plugin.Media.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor = global::FutsAppXamarin.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchor;
+			global::Plugin.Media.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity = global::FutsAppXamarin.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_anchorGravity;
+			global::Plugin.Media.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior = global::FutsAppXamarin.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_behavior;
+			global::Plugin.Media.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges = global::FutsAppXamarin.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_dodgeInsetEdges;
+			global::Plugin.Media.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge = global::FutsAppXamarin.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_insetEdge;
+			global::Plugin.Media.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline = global::FutsAppXamarin.Droid.Resource.Styleable.CoordinatorLayout_Layout_layout_keyline;
+			global::Plugin.Media.Resource.Styleable.CoordinatorLayout_statusBarBackground = global::FutsAppXamarin.Droid.Resource.Styleable.CoordinatorLayout_statusBarBackground;
+			global::Plugin.Media.Resource.Styleable.FontFamily = global::FutsAppXamarin.Droid.Resource.Styleable.FontFamily;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont = global::FutsAppXamarin.Droid.Resource.Styleable.FontFamilyFont;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_android_font = global::FutsAppXamarin.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_android_fontStyle = global::FutsAppXamarin.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::FutsAppXamarin.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_android_fontWeight = global::FutsAppXamarin.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::FutsAppXamarin.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_font = global::FutsAppXamarin.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_fontStyle = global::FutsAppXamarin.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::FutsAppXamarin.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_fontWeight = global::FutsAppXamarin.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::Plugin.Media.Resource.Styleable.FontFamilyFont_ttcIndex = global::FutsAppXamarin.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::Plugin.Media.Resource.Styleable.FontFamily_fontProviderAuthority = global::FutsAppXamarin.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Plugin.Media.Resource.Styleable.FontFamily_fontProviderCerts = global::FutsAppXamarin.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Plugin.Media.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::FutsAppXamarin.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Plugin.Media.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::FutsAppXamarin.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Plugin.Media.Resource.Styleable.FontFamily_fontProviderPackage = global::FutsAppXamarin.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Plugin.Media.Resource.Styleable.FontFamily_fontProviderQuery = global::FutsAppXamarin.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Plugin.Media.Resource.Styleable.GradientColor = global::FutsAppXamarin.Droid.Resource.Styleable.GradientColor;
+			global::Plugin.Media.Resource.Styleable.GradientColorItem = global::FutsAppXamarin.Droid.Resource.Styleable.GradientColorItem;
+			global::Plugin.Media.Resource.Styleable.GradientColorItem_android_color = global::FutsAppXamarin.Droid.Resource.Styleable.GradientColorItem_android_color;
+			global::Plugin.Media.Resource.Styleable.GradientColorItem_android_offset = global::FutsAppXamarin.Droid.Resource.Styleable.GradientColorItem_android_offset;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_centerColor = global::FutsAppXamarin.Droid.Resource.Styleable.GradientColor_android_centerColor;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_centerX = global::FutsAppXamarin.Droid.Resource.Styleable.GradientColor_android_centerX;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_centerY = global::FutsAppXamarin.Droid.Resource.Styleable.GradientColor_android_centerY;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_endColor = global::FutsAppXamarin.Droid.Resource.Styleable.GradientColor_android_endColor;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_endX = global::FutsAppXamarin.Droid.Resource.Styleable.GradientColor_android_endX;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_endY = global::FutsAppXamarin.Droid.Resource.Styleable.GradientColor_android_endY;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_gradientRadius = global::FutsAppXamarin.Droid.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_startColor = global::FutsAppXamarin.Droid.Resource.Styleable.GradientColor_android_startColor;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_startX = global::FutsAppXamarin.Droid.Resource.Styleable.GradientColor_android_startX;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_startY = global::FutsAppXamarin.Droid.Resource.Styleable.GradientColor_android_startY;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_tileMode = global::FutsAppXamarin.Droid.Resource.Styleable.GradientColor_android_tileMode;
+			global::Plugin.Media.Resource.Styleable.GradientColor_android_type = global::FutsAppXamarin.Droid.Resource.Styleable.GradientColor_android_type;
+			global::Plugin.Media.Resource.Xml.xamarin_essentials_fileprovider_file_paths = global::FutsAppXamarin.Droid.Resource.Xml.xamarin_essentials_fileprovider_file_paths;
 			global::Rg.Plugins.Popup.Resource.Animation.abc_fade_in = global::FutsAppXamarin.Droid.Resource.Animation.abc_fade_in;
 			global::Rg.Plugins.Popup.Resource.Animation.abc_fade_out = global::FutsAppXamarin.Droid.Resource.Animation.abc_fade_out;
 			global::Rg.Plugins.Popup.Resource.Animation.abc_grow_fade_in_from_bottom = global::FutsAppXamarin.Droid.Resource.Animation.abc_grow_fade_in_from_bottom;
@@ -11086,91 +11268,94 @@ namespace FutsAppXamarin.Droid
 			public const int ic_event_note_black_24dp = 2131165320;
 			
 			// aapt resource value: 0x7F070089
-			public const int ic_mtrl_chip_checked_black = 2131165321;
+			public const int ic_mode_edit_black_24dp = 2131165321;
 			
 			// aapt resource value: 0x7F07008A
-			public const int ic_mtrl_chip_checked_circle = 2131165322;
+			public const int ic_mtrl_chip_checked_black = 2131165322;
 			
 			// aapt resource value: 0x7F07008B
-			public const int ic_mtrl_chip_close_circle = 2131165323;
+			public const int ic_mtrl_chip_checked_circle = 2131165323;
 			
 			// aapt resource value: 0x7F07008C
-			public const int ic_place_black_24dp = 2131165324;
+			public const int ic_mtrl_chip_close_circle = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int ic_place_red_24dp = 2131165325;
+			public const int ic_place_black_24dp = 2131165325;
 			
 			// aapt resource value: 0x7F07008E
-			public const int logo_futsapp2 = 2131165326;
+			public const int ic_place_red_24dp = 2131165326;
 			
 			// aapt resource value: 0x7F07008F
-			public const int logo_futsapp2_background = 2131165327;
+			public const int logo_futsapp2 = 2131165327;
 			
 			// aapt resource value: 0x7F070090
-			public const int menu = 2131165328;
+			public const int logo_futsapp2_background = 2131165328;
 			
 			// aapt resource value: 0x7F070091
-			public const int mtrl_snackbar_background = 2131165329;
+			public const int menu = 2131165329;
 			
 			// aapt resource value: 0x7F070092
-			public const int mtrl_tabs_default_indicator = 2131165330;
+			public const int mtrl_snackbar_background = 2131165330;
 			
 			// aapt resource value: 0x7F070093
-			public const int navigation_empty_icon = 2131165331;
+			public const int mtrl_tabs_default_indicator = 2131165331;
 			
 			// aapt resource value: 0x7F070094
-			public const int notification_action_background = 2131165332;
+			public const int navigation_empty_icon = 2131165332;
 			
 			// aapt resource value: 0x7F070095
-			public const int notification_bg = 2131165333;
+			public const int notification_action_background = 2131165333;
 			
 			// aapt resource value: 0x7F070096
-			public const int notification_bg_low = 2131165334;
+			public const int notification_bg = 2131165334;
 			
 			// aapt resource value: 0x7F070097
-			public const int notification_bg_low_normal = 2131165335;
+			public const int notification_bg_low = 2131165335;
 			
 			// aapt resource value: 0x7F070098
-			public const int notification_bg_low_pressed = 2131165336;
+			public const int notification_bg_low_normal = 2131165336;
 			
 			// aapt resource value: 0x7F070099
-			public const int notification_bg_normal = 2131165337;
+			public const int notification_bg_low_pressed = 2131165337;
 			
 			// aapt resource value: 0x7F07009A
-			public const int notification_bg_normal_pressed = 2131165338;
+			public const int notification_bg_normal = 2131165338;
 			
 			// aapt resource value: 0x7F07009B
-			public const int notification_icon_background = 2131165339;
+			public const int notification_bg_normal_pressed = 2131165339;
 			
 			// aapt resource value: 0x7F07009C
-			public const int notification_template_icon_bg = 2131165340;
+			public const int notification_icon_background = 2131165340;
 			
 			// aapt resource value: 0x7F07009D
-			public const int notification_template_icon_low_bg = 2131165341;
+			public const int notification_template_icon_bg = 2131165341;
 			
 			// aapt resource value: 0x7F07009E
-			public const int notification_tile_bg = 2131165342;
+			public const int notification_template_icon_low_bg = 2131165342;
 			
 			// aapt resource value: 0x7F07009F
-			public const int notify_panel_notification_icon_bg = 2131165343;
+			public const int notification_tile_bg = 2131165343;
 			
 			// aapt resource value: 0x7F0700A0
-			public const int outline_save_black_18dp = 2131165344;
+			public const int notify_panel_notification_icon_bg = 2131165344;
 			
 			// aapt resource value: 0x7F0700A1
-			public const int pallone = 2131165345;
+			public const int outline_save_black_18dp = 2131165345;
 			
 			// aapt resource value: 0x7F0700A2
-			public const int silver = 2131165346;
+			public const int pallone = 2131165346;
 			
 			// aapt resource value: 0x7F0700A3
-			public const int tooltip_frame_dark = 2131165347;
+			public const int silver = 2131165347;
 			
 			// aapt resource value: 0x7F0700A4
-			public const int tooltip_frame_light = 2131165348;
+			public const int tooltip_frame_dark = 2131165348;
 			
 			// aapt resource value: 0x7F0700A5
-			public const int user = 2131165349;
+			public const int tooltip_frame_light = 2131165349;
+			
+			// aapt resource value: 0x7F0700A6
+			public const int user = 2131165350;
 			
 			static Drawable()
 			{
@@ -16997,7 +17182,10 @@ namespace FutsAppXamarin.Droid
 		{
 			
 			// aapt resource value: 0x7F100000
-			public const int xamarin_essentials_fileprovider_file_paths = 2131755008;
+			public const int file_paths = 2131755008;
+			
+			// aapt resource value: 0x7F100001
+			public const int xamarin_essentials_fileprovider_file_paths = 2131755009;
 			
 			static Xml()
 			{

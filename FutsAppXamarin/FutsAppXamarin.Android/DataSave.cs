@@ -111,7 +111,7 @@ namespace FutsAppXamarin.Droid
             CollectionReference coll = db.Collection("utenti");
             int index;
 
-            foreach (Giocatore d in Giocatore.players) //cambiare qui!
+            foreach (Giocatore d in Giocatore.amici) //cambiare qui!
             {
                 if (teams.Contains(d.username))
                 {

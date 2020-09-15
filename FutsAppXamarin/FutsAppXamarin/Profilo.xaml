@@ -2,20 +2,32 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:image="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
              x:Class="FutsAppXamarin.Profilo"
-             Title="Profilo">
-    <Frame BackgroundColor="DimGray"  Padding="0,0,0,0"  Margin="0,0" >
+             >
+
+    <NavigationPage.TitleView>
+        <Label  Text="FUTSAPP" Padding="5,0,0,0" FontFamily="titoli.ttf#titoli" TextColor="#fffc95" FontSize="24" VerticalTextAlignment="Center"/>
+    </NavigationPage.TitleView>
+    <Frame BackgroundColor="DarkSlateGray"  Padding="0,0,0,0"  Margin="0,0" >
             <StackLayout 
-        Orientation="Vertical">
+        Orientation="Vertical" VerticalOptions="Center">
+           
                 <Label
-                x:Name="username"
+                Text="PROFILO"
                 HorizontalOptions="Center"
-                FontSize="35"
+                FontSize="45"
                 FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
                 TextColor="White"/>
-                <image:CircleImage BorderColor="DarkGray" BorderThickness="3"  HeightRequest="200"  WidthRequest="200" x:Name="profile_image" Source="user.png"/>
-            <ImageButton Padding="20,0"  Source="ic_mode_edit_black_24dp">  </ImageButton>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                <image:CircleImage BorderColor="DarkGray" Aspect="AspectFill" BorderThickness="3"  HeightRequest="200"  WidthRequest="200" x:Name="profile_image" Source="user.png" Margin="10"/>
+                <ImageButton Padding="20,0" VerticalOptions="Center" Source="ic_mode_edit_black_24dp" Clicked="ImageButton_Clicked" BackgroundColor="Transparent"/>
+            </StackLayout>
 
-
+            <Label
+                x:Name="username"
+                HorizontalOptions="Center"
+                FontSize="30"
+                FontFamily="titoli.ttf#titoli"
+                TextColor="White"/>
             <Grid Margin="0,40,0,40" HorizontalOptions="Fill">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="50" />

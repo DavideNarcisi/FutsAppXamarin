@@ -25,12 +25,12 @@ namespace FutsAppXamarin.Popup
             vinte.Text = giocatore.dati["vittorie"].ToString();
             perse.Text = giocatore.dati["sconfitte"].ToString();
 
-            SetImmagine();
+            SetImmagine(giocatore.username);
         }
 
-        private async void SetImmagine()
+        private async void SetImmagine(string nome)
         {
-            ImageSource img = await new ImageHelper().LoadImage("milito");
+            ImageSource img = await new ImageHelper().LoadImage(nome);
             if (!img.Equals(null))
                 profile_image.Source = img;
 

@@ -1,4 +1,6 @@
-﻿using Rg.Plugins.Popup.Extensions;
+﻿using FutsAppXamarin.Model;
+using FutsAppXamarin.Pages;
+using Rg.Plugins.Popup.Extensions;
 using Rg.Plugins.Popup.Pages;
 using System;
 using System.Collections.Generic;
@@ -19,21 +21,37 @@ namespace FutsAppXamarin.Popup
         {
             InitializeComponent();
             username.Text = Giocatore.user.username;
+            SetImmagine();
         }
 
-      
+        private async void SetImmagine()
+        {
+            ImageSource img = await new ImageHelper().LoadImage(Giocatore.user.username);
+            if (!img.Equals(null))
+                profile_image.Source = img;
+
+        }
+
 
         protected override bool OnBackButtonPressed()
         {
             Navigation.PopPopupAsync();
             return true;
         }
-        void Menu_Click(object sender, EventArgs e)
+        async void Menu_Click(object sender, EventArgs e)
         {
             if (sender.Equals(profile))
-                Navigation.PushAsync(new Profilo());
+                await Navigation.PushAsync(new Profilo());
             else if (sender.Equals(aboutus))
-                Navigation.PushAsync(new AboutUs());
+                await Navigation.PushAsync(new AboutUs());
+            else if(sender.Equals(logout))
+            {
+                await Auth.Logout();
+                Xamarin.Forms.Application.Current.Properties["firstrun"] = "true";               
+                await Xamarin.Forms.Application.Current.SavePropertiesAsync();
+                await Navigation.PopToRootAsync();
+                Xamarin.Forms.Application.Current.MainPage = new LoginPage();
+            }
             Navigation.PopPopupAsync();
         }
     }

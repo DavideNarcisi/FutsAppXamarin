@@ -55,7 +55,7 @@ namespace FutsAppXamarin.Popup
 
         private async void SetImmagine()
         {
-            ImageSource img = await new ImageHelper().LoadImage("milito");
+            ImageSource img = await new ImageHelper().LoadImage(giocatore.username);
             if (!img.Equals(null))
                 profile_image.Source = img;
            
