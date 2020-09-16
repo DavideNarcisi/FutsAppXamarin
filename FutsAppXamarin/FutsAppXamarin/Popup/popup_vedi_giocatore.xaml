@@ -31,7 +31,7 @@
                 FontSize="35"
                 FontFamily="titoli.ttf#titoli"
                 TextColor="#07a4f3"/>
-                <image:CircleImage BorderColor="#094ba3" Aspect="AspectFill" BorderThickness="3" HeightRequest="150"  WidthRequest="150" x:Name="profile_image" Source="user.png"/>
+                <image:CircleImage BorderColor="#094ba3" Aspect="AspectFit" BorderThickness="3" HeightRequest="150"  WidthRequest="150" x:Name="profile_image" Source="user.png"/>
 
 
 
@@ -54,7 +54,7 @@
                 HorizontalTextAlignment="center"
                 HorizontalOptions="CenterAndExpand"
                 TextColor="#094ba3"
-                FontSize="12" />
+                FontSize="11" />
 
                     <Label
                 Grid.Column="1"
@@ -72,7 +72,7 @@
                 HorizontalTextAlignment="center"
                 HorizontalOptions="CenterAndExpand"
                 TextColor="#094ba3"
-                FontSize="12" />
+                FontSize="11" />
 
                     <Label
                     Grid.Column="3"

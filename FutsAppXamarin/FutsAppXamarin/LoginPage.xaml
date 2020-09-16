@@ -28,7 +28,7 @@
 
             <Button Text="Login" BackgroundColor="#fdd017" BorderColor="#ffff00" BorderWidth="6"
                     FontAttributes="Bold" FontSize="18" HorizontalOptions="Center" 
-                    Clicked="btn_Log" TextColor="#07a4f3" CornerRadius="10" WidthRequest="150"
+                    Clicked="btn_Log" TextColor="#07a4f3" CornerRadius="10" WidthRequest="160"
                     Margin="0,30,0,0" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
                      />
             <StackLayout Orientation="Vertical" VerticalOptions="End" Margin="0,0,0,20">
@@ -36,8 +36,8 @@
                        TextColor="#ffff00"/>
                 <Button Text="Registrati"  FontSize="14" HorizontalOptions="Center"  
                     Clicked="btn_Reg" BackgroundColor="#fdd017" BorderColor="#ffff00" BorderWidth="6"
-                    FontAttributes="Bold" TextColor="#07a4f3" CornerRadius="10" WidthRequest="120"
-                     FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"/>
+                    FontAttributes="Bold" TextColor="#07a4f3" CornerRadius="10" WidthRequest="130"
+                     FontFamily="Audiowide-Regular.ttf#Audiowide-Regular" Margin="0,0,0,10"/>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

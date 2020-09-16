@@ -40,13 +40,13 @@
                                     TextColor="#f12213" BackgroundColor="Transparent"
                                     HorizontalOptions="End" Clicked="Close"/>
                     <Label x:Name="data" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
-                           FontSize="16" TextColor="#094ba3" VerticalOptions="Center"/>
+                           FontSize="14" TextColor="#094ba3" VerticalOptions="Center"/>
 
                     <Label x:Name="ora" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
-                           FontSize="16" TextColor="#094ba3" VerticalOptions="Center" Grid.Row="1"/>
+                           FontSize="14" TextColor="#094ba3" VerticalOptions="Center" Grid.Row="1"/>
 
                     <Label x:Name="luogo" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
-                           FontSize="20" TextColor="#094ba3" VerticalOptions="Center" Grid.Column="1"
+                           FontSize="16" TextColor="#094ba3" VerticalOptions="Center" Grid.Column="1"
                            Grid.RowSpan="2"/>
                 </Grid>
 
@@ -335,12 +335,12 @@
 
                 </Grid>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
-                    <local:MyEntry x:Name="golCasa" FontFamily="titoli.ttf#titoli" FontSize="30" Placeholder="0"
+                    <local:MyEntry x:Name="golCasa" FontFamily="titoli.ttf#titoli" FontSize="22" Placeholder="0"
                            TextColor="#fdd017" HorizontalTextAlignment="Center" Margin="0,0,5,0" 
                                    WidthRequest="60"/>
-                    <Label FontFamily="titoli.ttf#titoli" FontSize="35" Text="-"
+                    <Label FontFamily="titoli.ttf#titoli" FontSize="22" Text="-"
                            TextColor="#fdd017" BackgroundColor="Transparent"/>
-                    <local:MyEntry x:Name="golOspite" FontFamily="titoli.ttf#titoli" FontSize="30" 
+                    <local:MyEntry x:Name="golOspite" FontFamily="titoli.ttf#titoli" FontSize="22" 
                            TextColor="#fdd017" Placeholder="0" HorizontalTextAlignment="Center"
                                    Margin="5,0,0,0" WidthRequest="60"/>
                 </StackLayout>
