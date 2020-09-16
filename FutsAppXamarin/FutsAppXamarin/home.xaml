@@ -32,7 +32,7 @@
                 <Label x:Name="risultato"  Text="" Grid.Row="2" Grid.RowSpan="2" FontSize="30" TextColor="#ffff00" FontFamily="titoli.ttf#titoli"  
                    HorizontalTextAlignment="Center"/>
             </Grid>
-            <StackLayout Orientation="Vertical" VerticalOptions="Center">
+            <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
                 <Button Text="HAI 0 RISULTATI DA INSERIRE" Clicked="gestisci_click" x:Name="inserisci"
                         FontFamily="titoli.ttf#titoli"
                         TextColor="#07a4f3"

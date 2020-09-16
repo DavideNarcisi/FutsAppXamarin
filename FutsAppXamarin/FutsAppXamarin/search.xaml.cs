@@ -15,7 +15,7 @@ namespace FutsAppXamarin
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class search : ContentPage
     {
-        List<Giocatore> Searchresult = new List<Giocatore>();
+        List<Giocatore> Searchresult;
         List<Giocatore> giocatori;
         public search()
         {
@@ -25,6 +25,7 @@ namespace FutsAppXamarin
         }
         private async void Giocatori_ItemTapped(object sender, EventArgs e)
         {
+            if (sender is ListView lv) lv.SelectedItem = null;
             var but = sender as Button ;
             var s = but.Text;
             foreach (Giocatore g in Searchresult)
@@ -39,17 +40,22 @@ namespace FutsAppXamarin
         }
         private void SearchBar_SearchButtonPressed(object sender, EventArgs e)
         {
-
+            Searchresult = new List<Giocatore>();
                        string keyword = SearchBar.Text;
             //IEnumerable<string> searchResult = giocatori.Where(giocatori => giocatori.ToLower().Contains(keyword.ToLower());
             
             giocatori = new List<Giocatore>(Giocatore.players);
+           
             foreach (var g in giocatori)
             {
                 if (g.username.ToLower().Contains(keyword.ToLower()) && !g.username.Equals(Giocatore.user.username))
-                 Searchresult.Add(g);
+                { Searchresult.Add(g);
+               
+                }
             }
 
+            foreach (var i in Searchresult)
+                Console.WriteLine(i.username);
 
             GiocatoriListView.ItemsSource = Searchresult;
          }
