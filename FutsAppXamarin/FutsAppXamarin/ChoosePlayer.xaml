@@ -7,19 +7,20 @@
         <Label Text="FUTSAPP" Padding="5,0,0,0" FontFamily="titoli.ttf#titoli" TextColor="#fffc95" FontSize="24" VerticalTextAlignment="Center"/>
     </NavigationPage.TitleView>
     <ContentPage.Content>
-        
-        <AbsoluteLayout>
-            <ScrollView>
-            <StackLayout Orientation="Vertical">
-            <ListView x:Name="Giocatori"
+        <RelativeLayout>
+            <ContentView RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1}"  
+             RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1}">
+
+
+                <ListView x:Name="Giocatori"
                       HasUnevenRows="True"
                       ItemTapped="Giocatori_ItemTapped">
                     <ListView.ItemTemplate >
                         <DataTemplate>
-                            
+
                             <ViewCell>
-                                
-                            <Button Text="{Binding username}"
+
+                                <Button Text="{Binding username}"
                                     x:Name="{Binding username}"   
                                     FontSize="24"
                                     TextColor="#07a4f3" 
@@ -31,24 +32,25 @@
                                     Clicked="Giocatore_Clicked"
                                     FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"/>
 
-                        </ViewCell>
+                            </ViewCell>
 
-                    </DataTemplate>
+                        </DataTemplate>
 
-                </ListView.ItemTemplate>
+                    </ListView.ItemTemplate>
 
-            </ListView>
-        </StackLayout>
-            </ScrollView>
-            <ImageButton Source="ic_add_black_30dp.xml" 
-                     BackgroundColor="#07a4f3"
-                     BorderColor="#094ba3"
-                     BorderWidth="5"
-                     CornerRadius="1000"
-                     AbsoluteLayout.LayoutFlags="PositionProportional"  
-                     AbsoluteLayout.LayoutBounds=".95,.95,80,80" 
-                     Clicked="Handle_Clicked" />
-        </AbsoluteLayout>
+                </ListView>
+            </ContentView>
+            
+                <ImageButton Source="salva_button.png" 
+
+                     BackgroundColor="Transparent"
+                     RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-100}"  
+                RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Height, Factor=1, Constant=-100}"
+                Clicked="Handle_Clicked" />
+        
+        </RelativeLayout>
+            
+            
 
     </ContentPage.Content>
 </ContentPage>

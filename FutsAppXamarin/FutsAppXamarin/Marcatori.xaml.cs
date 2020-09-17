@@ -22,9 +22,15 @@ namespace FutsAppXamarin
             marcatori = new List<Giocatore>(Giocatore.amici); //cambiare con amici            
             Ordina();
 
-            marcatori[0].medalm = "gold.jpg";
-            marcatori[1].medalm = "silver.jpg";
-            marcatori[2].medalm = "bronzo.jpg";
+            try
+            {
+                marcatori[0].medalm = "gold.jpg";
+                marcatori[1].medalm = "silver.jpg";
+                marcatori[2].medalm = "bronzo.jpg";
+            }
+            catch(Exception e)
+            { }
+            
 
             ClassificaListView.ItemsSource = marcatori;
             

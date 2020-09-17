@@ -20,7 +20,7 @@
             HasBackgroundAnimation="True"/>
     </pages:PopupPage.Animation>
 
-    <Frame BackgroundColor="#f12213" CornerRadius="23" Padding="4,4,4,4"  Margin="15,30">
+    <Frame BackgroundColor="#f12213" CornerRadius="23" Padding="4,4,4,4"  Margin="10,5">
         <Frame BackgroundColor="White" CornerRadius="20" Padding="1,1,1,1"  >
             <StackLayout 
         Orientation="Vertical">
@@ -35,10 +35,10 @@
                         <ColumnDefinition Width="2*"/>
                         <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Grid.RowSpan="2" Grid.Column="2" Text="X" FontSize="25"  
+                    <Button Grid.RowSpan="2" Grid.Column="2" Text="X" FontSize="20"  
                                      FontFamily="Audiowide-Regular.ttf#Audiowide-Regular" 
                                     TextColor="#f12213" BackgroundColor="Transparent"
-                                    HorizontalOptions="End" Clicked="Close"/>
+                                    HorizontalOptions="End" Clicked="Close" VerticalOptions="Start"/>
                     <Label x:Name="data" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
                            FontSize="14" TextColor="#094ba3" VerticalOptions="Center"/>
 
@@ -53,7 +53,7 @@
 
 
 
-                <Grid Margin="10,40,20,10" HorizontalOptions="Fill" VerticalOptions="Center" HeightRequest="320">
+                <Grid Margin="10,15,20,10" HorizontalOptions="Fill" VerticalOptions="Center" >
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="auto"/>
@@ -150,10 +150,10 @@
                         VerticalTextAlignment="Center"
                         Placeholder="0"
                         Grid.ColumnSpan="2"
-                        
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
                         TextColor="#094ba3"
                         
-                        FontSize="14" 
+                        FontSize="13" 
                         Grid.Row="2"
                         Grid.Column="1"/>
 
@@ -161,12 +161,12 @@
                         VerticalTextAlignment="Center"
                         x:Name="golA1"
                         HorizontalTextAlignment="Center"
-                        
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
                         Placeholder="0"
                         Grid.ColumnSpan="2"
                                               
                         TextColor="#094ba3"
-                        FontSize="14"
+                        FontSize="13"
                         Grid.Row="3"
                         Grid.Column="1"/>
 
@@ -174,12 +174,12 @@
                         VerticalTextAlignment="Center"
                         x:Name="golA2"
                         HorizontalTextAlignment="Center"
-                        
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
                        Placeholder="0"
                         Grid.ColumnSpan="2"
                         
                         TextColor="#094ba3"
-                        FontSize="14"
+                        FontSize="13"
                         Grid.Row="4"
                         Grid.Column="1"/>
 
@@ -187,12 +187,12 @@
                         VerticalTextAlignment="Center"
                         x:Name="golA3"
                         HorizontalTextAlignment="Center"
-                        
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
                         Placeholder="0"
                         Grid.ColumnSpan="2"
                        
                         TextColor="#094ba3"
-                        FontSize="14"
+                        FontSize="13"
                         Grid.Row="5"
                         Grid.Column="1"/>
 
@@ -200,12 +200,12 @@
                         VerticalTextAlignment="Center"
                         x:Name="golA4"
                         HorizontalTextAlignment="Center"
-                      
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
                         Placeholder="0"
                         Grid.ColumnSpan="2"
                         
                         TextColor="#094ba3"
-                        FontSize="14"
+                        FontSize="13"
                         Grid.Row="6"
                         Grid.Column="1"/>
 
@@ -272,12 +272,12 @@
                         VerticalTextAlignment="Center"
                         x:Name="golB0"
                         HorizontalTextAlignment="Center"
-                        
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
                         Placeholder="0"
                         Grid.ColumnSpan="2"
                        
                         TextColor="#094ba3"
-                        FontSize="14" 
+                        FontSize="13" 
                         Grid.Row="2"
                         Grid.Column="4"/>
 
@@ -285,12 +285,12 @@
                         VerticalTextAlignment="Center"
                         x:Name="golB1"
                         HorizontalTextAlignment="Center"
-                        
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
                         Placeholder="0"
                         Grid.ColumnSpan="2"
                         
                         TextColor="#094ba3"
-                        FontSize="14"
+                        FontSize="13"
                         Grid.Row="3"
                         Grid.Column="4"/>
 
@@ -298,12 +298,12 @@
                         VerticalTextAlignment="Center"
                         x:Name="golB2"
                         HorizontalTextAlignment="Center"
-                        
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
                         Placeholder="0"
                         Grid.ColumnSpan="2"
                         
                         TextColor="#094ba3"
-                        FontSize="14"
+                        FontSize="13"
                         Grid.Row="4"
                         Grid.Column="4"/>
 
@@ -311,12 +311,12 @@
                         VerticalTextAlignment="Center"
                         x:Name="golB3"
                         HorizontalTextAlignment="Center"
-                        
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
                         Placeholder="0"
                         Grid.ColumnSpan="2"
                         
                         TextColor="#094ba3"
-                        FontSize="14"
+                        FontSize="13"
                         Grid.Row="5"
                         Grid.Column="4"/>
 
@@ -324,23 +324,23 @@
                         VerticalTextAlignment="Center"
                         x:Name="golB4"
                         HorizontalTextAlignment="Center"
-                        
+                        FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
                         Placeholder="0"
                         Grid.ColumnSpan="2"
                         
                         TextColor="#094ba3"
-                        FontSize="14"
+                        FontSize="13"
                         Grid.Row="6"
                         Grid.Column="4"/>
 
                 </Grid>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" >
-                    <local:MyEntry x:Name="golCasa" FontFamily="titoli.ttf#titoli" FontSize="22" Placeholder="0"
+                    <local:MyEntry x:Name="golCasa" FontFamily="titoli.ttf#titoli" FontSize="30" Placeholder="0"
                            TextColor="#fdd017" HorizontalTextAlignment="Center" Margin="0,0,5,0" 
                                    WidthRequest="60"/>
-                    <Label FontFamily="titoli.ttf#titoli" FontSize="22" Text="-"
+                    <Label FontFamily="titoli.ttf#titoli" FontSize="30" Text="-" VerticalOptions="Center"
                            TextColor="#fdd017" BackgroundColor="Transparent"/>
-                    <local:MyEntry x:Name="golOspite" FontFamily="titoli.ttf#titoli" FontSize="22" 
+                    <local:MyEntry x:Name="golOspite" FontFamily="titoli.ttf#titoli" FontSize="30" 
                            TextColor="#fdd017" Placeholder="0" HorizontalTextAlignment="Center"
                                    Margin="5,0,0,0" WidthRequest="60"/>
                 </StackLayout>

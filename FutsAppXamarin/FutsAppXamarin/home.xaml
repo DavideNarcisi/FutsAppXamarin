@@ -9,15 +9,15 @@
     <ContentPage.Content>
         <StackLayout Orientation="Vertical">
             
-            <Image HeightRequest="180" Aspect="AspectFill" Source="campo_prima_volta.jpg"
+            <Image HeightRequest="180" Aspect="AspectFit" Source="campo_prima_volta.jpg"
                    IsVisible="False" x:Name="prima"/>
             <Grid HeightRequest="180" x:Name="normale">
                 <Grid.RowDefinitions>
+                    <RowDefinition Height="0"/>
+                    <RowDefinition Height="*"/>
                     <RowDefinition Height="10"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="10"/>
-                    <RowDefinition Height="auto"/>
-                    <RowDefinition Height="10"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="0"/>
                 </Grid.RowDefinitions>
 
                 <Image Source="campo.jpg" Aspect="AspectFill" Grid.RowSpan="5" />
@@ -29,11 +29,11 @@
                    HorizontalOptions="Center"
                    HorizontalTextAlignment="Center" />
 
-                <Label x:Name="risultato"  Text="" Grid.Row="2" Grid.RowSpan="2" FontSize="30" TextColor="#ffff00" FontFamily="titoli.ttf#titoli"  
+                <Label x:Name="risultato"  Text="" Grid.Row="2" Grid.RowSpan="2" FontSize="32" TextColor="#ffff00" FontFamily="titoli.ttf#titoli"  
                    HorizontalTextAlignment="Center"/>
             </Grid>
             <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
-                <Button Text="HAI 0 RISULTATI DA INSERIRE" Clicked="gestisci_click" x:Name="inserisci"
+                <Button Text="0 RISULTATI DA INSERIRE" Clicked="gestisci_click" x:Name="inserisci"
                         FontFamily="titoli.ttf#titoli"
                         TextColor="#07a4f3"
                         FontSize="16"
@@ -42,7 +42,7 @@
                         CornerRadius="30"
                         BackgroundColor="#fdd017"
                         HorizontalOptions="FillAndExpand"
-                        Margin="20,10,20,5"/>
+                        Margin="20,5,20,5"/>
 
                 <Button Text="STORICO" Clicked="gestisci_click" x:Name="storico"
                         FontFamily="titoli.ttf#titoli"
@@ -66,7 +66,7 @@
                         CornerRadius="30"
                         BackgroundColor="#fdd017"
                         HorizontalOptions="FillAndExpand"
-                        Margin="20,5,20,10"/>
+                        Margin="20,5,20,5"/>
                 
                 <Button Text="CLASSIFICHE" Clicked="gestisci_click" x:Name="classifiche"
                         FontFamily="titoli.ttf#titoli"

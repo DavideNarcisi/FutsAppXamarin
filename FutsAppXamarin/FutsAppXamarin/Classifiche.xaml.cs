@@ -20,9 +20,13 @@ namespace FutsAppXamarin
             InitializeComponent();
             classifica = new List<Giocatore>(Giocatore.amici);
             Ordina();
-            classifica[0].medal = "gold.jpg";
-            classifica[1].medal = "silver.jpg";
-            classifica[2].medal = "bronzo.jpg";
+            try
+            {
+                classifica[0].medal = "gold.jpg";
+                classifica[1].medal = "silver.jpg";
+                classifica[2].medal = "bronzo.jpg";
+            }
+            catch(Exception e) { }
 
             ClassificaListView.ItemsSource = classifica;
         }

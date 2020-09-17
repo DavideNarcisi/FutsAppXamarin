@@ -32,12 +32,12 @@
                     Margin="0,30,0,0" FontFamily="Audiowide-Regular.ttf#Audiowide-Regular"
                      />
             <StackLayout Orientation="Vertical" VerticalOptions="End" Margin="0,0,0,20">
-                <Label Text="Non sei ancora registrato?" Margin="0,0,0,15" HorizontalOptions="Center"
+                <Label Text="Non sei ancora registrato?" Margin="0,0,0,10" HorizontalOptions="Center"
                        TextColor="#ffff00"/>
                 <Button Text="Registrati"  FontSize="14" HorizontalOptions="Center"  
                     Clicked="btn_Reg" BackgroundColor="#fdd017" BorderColor="#ffff00" BorderWidth="6"
                     FontAttributes="Bold" TextColor="#07a4f3" CornerRadius="10" WidthRequest="130"
-                     FontFamily="Audiowide-Regular.ttf#Audiowide-Regular" Margin="0,0,0,10"/>
+                     FontFamily="Audiowide-Regular.ttf#Audiowide-Regular" />
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

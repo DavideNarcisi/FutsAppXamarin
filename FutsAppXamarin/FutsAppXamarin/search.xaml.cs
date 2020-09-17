@@ -54,8 +54,6 @@ namespace FutsAppXamarin
                 }
             }
 
-            foreach (var i in Searchresult)
-                Console.WriteLine(i.username);
 
             GiocatoriListView.ItemsSource = Searchresult;
          }

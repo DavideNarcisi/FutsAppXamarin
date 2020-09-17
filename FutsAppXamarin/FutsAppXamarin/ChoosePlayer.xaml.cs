@@ -95,5 +95,7 @@ namespace FutsAppXamarin
         {
             if (sender is ListView lv) lv.SelectedItem = null;
         }
+
+        
     }
 }
